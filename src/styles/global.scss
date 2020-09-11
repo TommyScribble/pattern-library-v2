@@ -1,0 +1,68 @@
+@import-normalize;
+@import-sanitize;
+@import 'colours', 'fonts', 'functions', 'mixins';
+
+$basefont-size: 16px;
+
+body {
+	font-family: $ff-open-sans;
+	font-weight: 300;
+	font-size: $basefont-size;
+	color: $text-color;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $ff-archivo;
+	font-weight: 500;
+	color: $heading-color;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1.5rem;
+	line-height: 1.25;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	line-height: 1.2;
+}
+
+h3 {
+	font-size: 1.75rem;
+	margin-bottom: 0.75rem;
+	line-height: 1.1;
+}
+
+h4 {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	line-height: 1;
+}
+
+h5 {
+	font-size: 1.25rem;
+	margin-bottom: 0.25rem;
+	line-height: 1;
+}
+
+h6 {
+	font-size: 1rem;
+	margin-bottom: 0.25rem;
+	line-height: 1;
+}
+
+p {
+	margin-bottom: 0.75rem;
+}

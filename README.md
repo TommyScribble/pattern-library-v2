@@ -1,3 +1,16 @@
+# React / Typescript Biolerplater
+This starter project ready to go.
+
+Includes:
+- Typescript
+- Atomic components
+- Unit tests (Jest)
+- CSS modules (using SCSS)
+- Base styles (globals/mixins/functions/component)
+- Folder structure
+- Linting (eslint/stylelint) - precommmit
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

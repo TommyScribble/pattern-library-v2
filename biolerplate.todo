@@ -1,0 +1,12 @@
+- Create Typescript / React project @done
+- Add folder structure @done
+	- Atoms @done
+	- Molecules @done
+	- Templates @done
+	- Pages @done
+- Install CSS Modules
+- Copy Atoms from orignal project
+- Add CSS for each Atom
+- Add test to each Atoms
+- Add routing system
+- Push to my GitHub

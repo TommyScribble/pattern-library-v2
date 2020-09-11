@@ -1,0 +1,38 @@
+@import "./styles/colours";
+
+html {
+	background-color: $grey-dark;
+	width: 100vw;
+	height: 100vh;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.header {
+	// flex: 1;
+	width: 75%;
+
+	@media  (min-width: 670px) {
+		width: auto;
+	}
+}
+
+.title {
+	color: $grey-light;
+	margin-top: 0;
+}
+
+.para {
+	color: $white;
+}
+
+.link {
+	display: block;
+	color: $scribble-red;
+	margin-bottom: 2rem;
+}

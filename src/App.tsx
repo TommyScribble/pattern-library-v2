@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import styles from "./App.module.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className={styles.container}>
+			<header className={styles.header}>
+				<h1 className={styles.title}>React and Typescript Starter</h1>
+				<p className={styles.para}>
+					This project includes all the basics to get up and running in
+					minutes
+				</p>
+				<a
+					className={styles.link}
+					href="https://reactjs.org"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Download the Biolerplate
+				</a>
+			</header>
+
+		</div>
+	);
 }
 
 export default App;
