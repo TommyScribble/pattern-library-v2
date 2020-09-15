@@ -6,9 +6,8 @@ type Props = {
 	headingText: string;
 };
 
-const Heading: React.FC<Props> = ({ tagNumber, headingText }: Props) => {
+const Heading = ({ tagNumber, headingText }: Props) => {
 	const HeaderTag: any = `h${tagNumber}`;
-
 	return <HeaderTag>{headingText}</HeaderTag>;
 };
 

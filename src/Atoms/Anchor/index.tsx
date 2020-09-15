@@ -45,7 +45,7 @@ const Anchor: React.FC<Props> = ({
 			break;
 		default:
 			buttonAnchor = (
-				<a href={path} className={anchorClass} onClick={handleClick}>
+				<a href={path} className={anchorClass} onClick={handleClick} target="_blank">
 					{children}
 				</a>
 			);
