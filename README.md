@@ -4,7 +4,7 @@ This starter project ready to go.
 Includes:
 - Typescript
 - Atomic components
-- Unit tests (Jest)
+- Unit tests (Jest & React Testing Library)
 - CSS modules (using SCSS)
 - Base styles (globals/mixins/functions/component)
 - Folder structure

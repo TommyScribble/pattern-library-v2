@@ -13,7 +13,7 @@ type Props = {
 	children?: any;
 };
 
-const Anchor: React.FC<Props> = ({
+const Anchor = ({
 	path,
 	anchorClass,
 	disabled,

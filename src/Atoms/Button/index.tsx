@@ -8,14 +8,14 @@ type Props = {
 	children: any;
 };
 
-const Button: React.FC<Props> = ({
+const Button = ({
 	type,
 	style,
 	btnClass,
 	children,
 }: Props) => {
 	return (
-		<button type={type} style={style} className={`btn ` + btnClass}>
+		<button type={type} style={style} className={`btn ${btnClass}`}>
 			{children}
 		</button>
 	);
