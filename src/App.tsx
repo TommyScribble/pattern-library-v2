@@ -11,7 +11,7 @@ function App() {
 			<header className={styles.header}>
 				<Heading tagNumber={1} className={styles.title} headingText='React and Typescript Starter'/>
 				<Text className={styles.para}>
-					This project includes all the basics to get up and running in
+					This project includes all the essentials to get up and running in
 					minutes
 				</Text>
 				<Anchor
