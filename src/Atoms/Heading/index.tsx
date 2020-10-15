@@ -4,11 +4,12 @@ import propTypes from 'prop-types';
 type Props = {
 	tagNumber: number;
 	headingText: string;
+	className?: string;
 };
 
-const Heading = ({ tagNumber, headingText }: Props) => {
+const Heading = ({ tagNumber, headingText, className }: Props) => {
 	const HeaderTag: any = `h${tagNumber}`;
-	return <HeaderTag>{headingText}</HeaderTag>;
+	return <HeaderTag className={className}>{headingText}</HeaderTag>;
 };
 
 Heading.propTypes = {

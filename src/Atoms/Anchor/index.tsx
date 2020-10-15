@@ -7,18 +7,20 @@ import NavLink from '../NavLink';
 
 type Props = {
 	path: string;
-	anchorClass?: string;
+	className?: string;
 	disabled?: boolean;
-	linkType?: string;
+	linkType?: 'internal' | 'navigation';
 	children?: any;
+	rel?: any;
 };
 
 const Anchor = ({
 	path,
-	anchorClass,
+	className,
 	disabled,
 	linkType,
 	children,
+	rel
 }: Props) => {
 	let buttonAnchor;
 
@@ -31,21 +33,21 @@ const Anchor = ({
 	switch (linkType) {
 		case 'internal':
 			buttonAnchor = (
-				<Link to={path} className={anchorClass} onClick={handleClick}>
+				<Link to={path} className={className} onClick={handleClick} rel={rel}>
 					{children}
 				</Link>
 			);
 			break;
 		case 'navigation':
 			buttonAnchor = (
-				<NavLink to={path} className={anchorClass} onClick={handleClick}>
+				<NavLink to={path} className={className} onClick={handleClick}>
 					{children}
 				</NavLink>
 			);
 			break;
 		default:
 			buttonAnchor = (
-				<a href={path} className={anchorClass} onClick={handleClick} target="_blank">
+				<a href={path} className={className} onClick={handleClick} target="_blank" rel={rel}>
 					{children}
 				</a>
 			);
@@ -56,7 +58,7 @@ const Anchor = ({
 
 Anchor.propTypes = {
 	path: PropTypes.string.isRequired,
-	anchorClass: PropTypes.string,
+	className: PropTypes.string,
 	linkType: PropTypes.string,
 	children: PropTypes.any,
 };

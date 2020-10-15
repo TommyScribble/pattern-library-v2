@@ -1,5 +1,5 @@
 # React / Typescript Biolerplater
-This starter project ready to go.
+This starter project is meant to get you up and running with all the essentails to start building you project immediatley. It contains all the basic building block to get started quickly and safely.
 
 Includes:
 - Typescript
@@ -8,7 +8,7 @@ Includes:
 - CSS modules (using SCSS)
 - Base styles (globals/mixins/functions/component)
 - Folder structure
-- Linting (eslint/stylelint) - precommmit
+- Linting (eslint/stylelint) - using precommmit hook
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

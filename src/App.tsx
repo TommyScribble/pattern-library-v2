@@ -1,24 +1,25 @@
 import React from "react";
 
+import Heading from "./Atoms/Heading";
+import Text from './Atoms/Text';
+import Anchor from "./Atoms/Anchor";
 import styles from "./App.module.scss";
 
 function App() {
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
-				<h1 className={styles.title}>React and Typescript Starter</h1>
-				<p className={styles.para}>
+				<Heading tagNumber={1} className={styles.title} headingText='React and Typescript Starter'/>
+				<Text className={styles.para}>
 					This project includes all the basics to get up and running in
 					minutes
-				</p>
-				<a
+				</Text>
+				<Anchor
 					className={styles.link}
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
+					path='https://github.com/TommyScribble/react-typescript-biolerplate'
 				>
 					Download the Biolerplate
-				</a>
+				</Anchor>
 			</header>
 
 		</div>
