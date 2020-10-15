@@ -1,4 +1,4 @@
-# React / Typescript Biolerplater
+# React / Typescript Biolerplater - wip
 This starter project is meant to get you up and running with all the essentails to start building you project immediatley. It contains all the basic building block to get started quickly and safely.
 
 Includes:
