@@ -47,7 +47,7 @@ const Anchor = ({
 			break;
 		default:
 			buttonAnchor = (
-				<a href={path} className={className} onClick={handleClick} target="_blank" rel={rel}>
+				<a href={path} className={className} onClick={handleClick} target="_blank" rel="noopener noreferrer">
 					{children}
 				</a>
 			);
