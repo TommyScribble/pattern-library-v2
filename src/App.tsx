@@ -12,7 +12,10 @@ function App() {
 				<Heading tagNumber={1} className={styles.title} headingText='React and Typescript Starter'/>
 				<Text className={styles.para}>
 					This project includes all the essentials to get up and running in
-					minutes
+					minutes.
+				</Text>
+				<Text className={styles.para}>
+					It's currently still WIP, so check back soon for the complete version
 				</Text>
 				<Anchor
 					className={styles.link}
