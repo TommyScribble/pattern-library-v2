@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Link } from '@reach/router';
 
 import NavLink from '../NavLink';
@@ -22,7 +22,9 @@ const Anchor = ({
 	children,
 	rel
 }: Props) => {
-	let buttonAnchor;
+	let buttonAnchor: JSX.Element;
+
+	const isDisabled = disabled === true ? 'disabled' : null;
 
 	const handleClick = (e: any) => {
 		if (disabled) {
@@ -33,34 +35,27 @@ const Anchor = ({
 	switch (linkType) {
 		case 'internal':
 			buttonAnchor = (
-				<Link to={path} className={className} onClick={handleClick} rel={rel}>
+				<Link to={path} className={`${isDisabled} ${className}`} onClick={handleClick} rel={rel}>
 					{children}
 				</Link>
 			);
 			break;
 		case 'navigation':
 			buttonAnchor = (
-				<NavLink to={path} className={className} onClick={handleClick}>
+				<NavLink to={path} className={`${isDisabled} ${className}`} onClick={handleClick}>
 					{children}
 				</NavLink>
 			);
 			break;
 		default:
 			buttonAnchor = (
-				<a href={path} className={className} onClick={handleClick} target="_blank" rel="noopener noreferrer">
+				<a href={path} className={`${isDisabled} ${className}`} onClick={handleClick} target="_blank" rel="noopener noreferrer">
 					{children}
 				</a>
 			);
 	}
 
 	return buttonAnchor;
-};
-
-Anchor.propTypes = {
-	path: PropTypes.string.isRequired,
-	className: PropTypes.string,
-	linkType: PropTypes.string,
-	children: PropTypes.any,
 };
 
 export default Anchor;

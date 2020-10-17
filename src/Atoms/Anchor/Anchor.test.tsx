@@ -29,7 +29,7 @@ it('renders external links with the attribute target="_blank"', () => {
 });
 
 it('renders internal navigtion links and adds current class when route matches href', async () => {
-	const {container, history: {navigate}} = renderWithRouter(<Anchor path={internaLink} linkType='navigtion'>{linkText}</Anchor>);
+	const {container, history: {navigate}} = renderWithRouter(<Anchor path={internaLink} linkType='navigation'>{linkText}</Anchor>);
 	const linkContainer = container;
 
 	await navigate(internaLink);
