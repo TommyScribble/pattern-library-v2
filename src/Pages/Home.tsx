@@ -20,21 +20,21 @@ const Home = () => {
 					running in minutes.
 				</Text>
 				<Text className={styles.para}>
-					It's currently still WIP, so check back soon for the
-					complete version
+					Click on the links below to download and view more
+					information about it.
 				</Text>
 				<Anchor
 					className={styles.link}
 					path="https://github.com/TommyScribble/react-typescript-biolerplate"
 				>
-					View the repo on Github
+					View and download this repo on Github
 				</Anchor>
 				<Anchor
 					className={styles.link}
 					linkType="internal"
 					path="/about"
 				>
-					Some info and another route here
+					More info about this repo
 				</Anchor>
 			</header>
 		</div>

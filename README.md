@@ -1,5 +1,5 @@
-# React / Typescript Biolerplater - wip
-This starter project is meant to get you up and running with all the essentails to start building you project immediatley. It contains all the basic building block to get started quickly and safely.
+# React / Typescript Biolerplater
+This starter project is meant to get you up and running with all the essentails to start building your project immediatley. It contains all the basic building blocks to get started in minutes.
 
 Includes:
 - Typescript
@@ -36,10 +36,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
-
-### `yarn eject`
-
-This is the standard react eject command... so rememer the rules and olny di this if you really want / need to.
 
 ## Support
 
