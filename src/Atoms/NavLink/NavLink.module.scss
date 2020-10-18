@@ -1,0 +1,5 @@
+@import '../../styles/colours';
+
+.current {
+	color: color-get(brand, primary);
+}

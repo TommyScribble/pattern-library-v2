@@ -1,0 +1,19 @@
+@import '../../styles/mixins', '../../styles/colours';
+
+.btn {
+	display: inline-block;
+	padding: rem(15px) rem(32px);
+	border: none;
+	color: color-get(utility, white); /* stylelint-disable-line */
+	text-align: center;
+	text-decoration: none;
+	font-size: font-get(button, m);
+
+	&.primary {
+		background-color: color-get(primary, brand);
+	}
+
+	&.secondary {
+		background-color: color-get(primary, secondary);
+	}
+}

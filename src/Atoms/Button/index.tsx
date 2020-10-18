@@ -1,22 +1,22 @@
 import React from 'react';
 
+import style from './Button.module.scss';
+
 type Props = {
 	type?: 'submit' | 'reset' | 'button';
-	style?: React.CSSProperties;
-	btnClass?: string;
+	btnClass: string;
 	children: any;
 	onClick?: (event: any) => void;
 };
 
 const Button = ({
 	type,
-	style,
 	btnClass,
 	children,
 	onClick
 }: Props) => {
 	return (
-		<button type={type} style={style} className={`btn ${btnClass}`} onClick={onClick}>
+		<button type={type} className={`${style.btn} ${style[btnClass]}`} onClick={onClick}>
 			{children}
 		</button>
 	);

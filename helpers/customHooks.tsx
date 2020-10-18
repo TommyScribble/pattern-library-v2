@@ -22,7 +22,7 @@ const useBreakpoint = (size: number, type = 'min') => {
 
 const isBrowser = typeof window !== `undefined`;
 
-const getScrollPosition = ( {element, useWindow} ) => {
+const getScrollPosition = (element?: any, useWindow?: boolean ) => {
 	if (!isBrowser) return { x: 0, y: 0 };
 	const target = element ? element.current : document.body;
 	const position = target.getBoundingClientRect();
@@ -39,7 +39,7 @@ const useScrollPosition = (
 	wait?: number,
 ) => {
 	const position = useRef(getScrollPosition({ element, useWindow }));
-	let throttleTimeout = null;
+	let throttleTimeout: null | (NodeJS.Timeout) = null;
 	const callBack = () => {
 		const currPos = getScrollPosition({ element, useWindow });
 		effect({ prevPos: position.current, currPos });

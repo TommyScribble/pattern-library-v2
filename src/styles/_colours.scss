@@ -1,8 +1,42 @@
-$text-color: #4D4D4D;
-$heading-color: #353535;
 $scribble-red: #E20016;
+$grey-xxdark: #353535;
+$grey-xdark: #4D4D4D;
 $grey-dark: #4E4F51;
 $grey-mid: #808285;
 $grey-light: #C2C2C6;
-$white: #FFF;
+$bright-white: #FFF;
 $dark-grey: #222;
+
+$colors: (
+	brand: (
+		primary: $scribble-red,
+		secondary: $grey-xxdark
+	),
+	text: (
+		heading: $grey-xxdark,
+		copy: $grey-xdark,
+	),
+	utility: (
+		white: $bright-white,
+		black: $dark-grey,
+		xxdark-grey: $grey-xxdark,
+		xdark-grey: $grey-xdark,
+		dark-grey: $grey-dark,
+		mid-grey: $grey-mid,
+		light-grey: $grey-light,
+	)
+);
+
+@import './functions';
+/// Get colours from nested brand colour map
+/// @author Tommy Scribble
+/// @param {String} $color-type - brand, brand-tint, text, grey, function
+/// @param {String} $color - colour to grab from type map
+/// @return {String} - Hex colour code
+@function color-get($color-type, $color) {
+	@if map-has-key($colors, $color-type) {
+		@return map-deep-get($colors, $color-type, $color);
+	} @else {
+		@error "Either the type or colour are not defined";
+	}
+}

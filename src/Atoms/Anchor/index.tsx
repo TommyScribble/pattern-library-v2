@@ -1,8 +1,9 @@
 import React from 'react';
-
 import { Link } from '@reach/router';
 
 import NavLink from '../NavLink';
+
+import style from './Anchor.module.scss';
 
 
 type Props = {
@@ -35,21 +36,21 @@ const Anchor = ({
 	switch (linkType) {
 		case 'internal':
 			buttonAnchor = (
-				<Link to={path} className={`${isDisabled} ${className}`} onClick={handleClick} rel={rel}>
+				<Link to={path} className={`${style.anchor} ${isDisabled} ${className}`} onClick={handleClick} rel={rel}>
 					{children}
 				</Link>
 			);
 			break;
 		case 'navigation':
 			buttonAnchor = (
-				<NavLink to={path} className={`${isDisabled} ${className}`} onClick={handleClick}>
+				<NavLink to={path} className={`${style.anchor} ${isDisabled} ${className}`} onClick={handleClick}>
 					{children}
 				</NavLink>
 			);
 			break;
 		default:
 			buttonAnchor = (
-				<a href={path} className={`${isDisabled} ${className}`} onClick={handleClick} target="_blank" rel="noopener noreferrer">
+				<a href={path} className={`${style.anchor} ${isDisabled} ${className}`} onClick={handleClick} target="_blank" rel="noopener noreferrer">
 					{children}
 				</a>
 			);

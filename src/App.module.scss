@@ -1,7 +1,7 @@
-@import "./styles/colours";
+@import "../src/styles/colours";
 
 html {
-	background-color: $grey-dark;
+	background-color: color-get(utility, dark-grey);
 	width: 100vw;
 	height: 100vh;
 }
@@ -21,22 +21,21 @@ html {
 }
 
 .title {
-	color: $grey-light;
+	color: color-get(utility, light-grey);
 	margin-top: 0;
-	margin-bottom: 1rem;
 }
 
 .para {
-	color: $white;
+	color: color-get(utility, white); /* stylelint-disable-line */
 }
 
 .link {
 	display: block;
-	color: $scribble-red;
+	color: color-get(brand, primary);
 	margin-bottom: 2rem;
 	transition: color 0.3s ease-out;
 
 	&:hover {
-		color: $white;
+		color: color-get(utility, white); /* stylelint-disable-line */
 	}
 }

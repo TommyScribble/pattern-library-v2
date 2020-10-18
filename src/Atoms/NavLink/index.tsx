@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from '@reach/router';
 
+import style from './NavLink.module.scss';
+
 type Props = {
 	to: string;
 	className?: string;
@@ -10,7 +12,7 @@ type Props = {
 
 const NavLink = ({ to, className, onClick, children }: Props) => {
 	const location = useLocation();
-	if (location.pathname === to) className = `${className} current`;
+	if (location.pathname === to) className = `${className} ${style.current}`;
 
 	return (
 		<Link to={to} onClick={onClick} className={className}>

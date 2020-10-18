@@ -1,0 +1,11 @@
+@import '../../styles/fonts', '../../styles/colours';
+
+.anchor {
+	@include font-get(anchor, m);
+	color: color-get(brand, primary);
+	transition: color 0.3s ease-out;
+
+	&:hover {
+		color: color-get(brand, secondary);
+	}
+}
