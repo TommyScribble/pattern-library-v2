@@ -30,12 +30,6 @@ html {
 }
 
 .link {
-	color: color-get(brand, primary);
 	margin-bottom: 2rem;
 	margin-right: 2rem;
-	transition: color 0.3s ease-out;
-
-	&:hover {
-		color: color-get(utility, white); /* stylelint-disable-line */
-	}
 }

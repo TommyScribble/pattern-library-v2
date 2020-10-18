@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
 const useBreakpoint = (size: number, type = 'min') => {
-
 	const [widthOnLoad, setWidthOnLoad] = useState(false);
 	const [widthOnResize, setWidthOnResize] = useState(0);
 
@@ -17,12 +16,11 @@ const useBreakpoint = (size: number, type = 'min') => {
 	return type === 'min'
 		? widthOnLoad || widthOnResize > size
 		: widthOnLoad || widthOnResize < size;
-
 };
 
 const isBrowser = typeof window !== `undefined`;
 
-const getScrollPosition = (element?: any, useWindow?: boolean ) => {
+const getScrollPosition = (element?: any, useWindow?: boolean) => {
 	if (!isBrowser) return { x: 0, y: 0 };
 	const target = element ? element.current : document.body;
 	const position = target.getBoundingClientRect();
@@ -36,10 +34,10 @@ const useScrollPosition = (
 	dependencies?: any,
 	element?: HTMLElement,
 	useWindow?: any,
-	wait?: number,
+	wait?: number
 ) => {
 	const position = useRef(getScrollPosition({ element, useWindow }));
-	let throttleTimeout: null | (NodeJS.Timeout) = null;
+	let throttleTimeout: null | NodeJS.Timeout = null;
 	const callBack = () => {
 		const currPos = getScrollPosition({ element, useWindow });
 		effect({ prevPos: position.current, currPos });

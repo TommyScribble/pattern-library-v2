@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 
-import {useBreakpoint} from '../../../helpers/customHooks';
+import { useBreakpoint } from '../../helpers/customHooks';
 
 import style from './Input.module.scss';
 
@@ -18,11 +18,28 @@ type Props = {
 	autoFocus?: boolean;
 	min?: string;
 	max?: string;
-}
- 
-const Input = ({ label, className, labelClass, type, value, placeholder, desktopPlaceholder, id, onChange, checked, autoFocus, min, max }: Props) => {
+};
+
+const Input = ({
+	label,
+	className,
+	labelClass,
+	type,
+	value,
+	placeholder,
+	desktopPlaceholder,
+	id,
+	onChange,
+	checked,
+	autoFocus,
+	min,
+	max,
+}: Props) => {
 	const checkForTypeStyle = style[type] ? style[type] : type;
-	const placeHolder = desktopPlaceholder && useBreakpoint(768) ? desktopPlaceholder : placeholder;
+	const placeHolder =
+		desktopPlaceholder && useBreakpoint(768)
+			? desktopPlaceholder
+			: placeholder;
 
 	return (
 		<>
@@ -47,6 +64,6 @@ const Input = ({ label, className, labelClass, type, value, placeholder, desktop
 			{type === 'checkbox' && <label htmlFor={id}>{label}</label>}
 		</>
 	);
-}
- 
+};
+
 export default Input;
