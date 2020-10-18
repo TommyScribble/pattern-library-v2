@@ -1,4 +1,4 @@
-@import "../src/styles/colours";
+@import '../styles/colours';
 
 html {
 	background-color: color-get(utility, dark-grey);
@@ -15,7 +15,7 @@ html {
 
 .header {
 	width: 75%;
-	@media  (min-width: 670px) {
+	@media (min-width: 670px) {
 		width: auto;
 	}
 }
