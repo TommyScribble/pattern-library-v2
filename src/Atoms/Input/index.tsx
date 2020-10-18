@@ -2,6 +2,8 @@ import React, { ChangeEvent } from 'react';
 
 import {useBreakpoint} from '../../../helpers/customHooks';
 
+import style from './Input.module.scss';
+
 type Props = {
 	label?: string;
 	className?: string;
@@ -19,7 +21,6 @@ type Props = {
 }
  
 const Input = ({ label, className, labelClass, type, value, placeholder, desktopPlaceholder, id, onChange, checked, autoFocus, min, max }: Props) => {
- 	let style = {};
 	const checkForTypeStyle = style[type] ? style[type] : type;
 	const placeHolder = desktopPlaceholder && useBreakpoint(768) ? desktopPlaceholder : placeholder;
 

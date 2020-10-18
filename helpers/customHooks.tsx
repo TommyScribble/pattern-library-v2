@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-const useBreakpoint = (size?: number, type = 'min') => {
+const useBreakpoint = (size: number, type = 'min') => {
 
 	const [widthOnLoad, setWidthOnLoad] = useState(false);
 	const [widthOnResize, setWidthOnResize] = useState(0);

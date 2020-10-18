@@ -1,0 +1,15 @@
+$z-index: (
+	header: 900,
+);
+
+.header {
+	z-index: map-get($z-index, header);
+}
+
+@function zindex-get($index) {
+	@if map-get($z-index, $index) {
+		@return map-get($z-index, $index);
+	} @else {
+		@error "No index: #{$index}. Do yo need to add it?";
+	}
+}

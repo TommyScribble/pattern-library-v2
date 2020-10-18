@@ -1,3 +1,90 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet'),
+		'./functions',
+		'./mixins';
+		
 $ff-archivo: 'Archivo', sans-serif;
 $ff-open-sans: 'Open Sans', sans-serif;
+
+$fonts: (
+	heading: (
+		xl: (
+			rem(39.81px),
+			rem(56px)
+		),
+		l: (
+			rem(33.18px),
+			rem(44px)
+		),
+		m: (
+			rem(27.65px),
+			rem(36px)
+		),
+		s: (
+			rem(23.05px),
+			rem(32px)
+		),
+		xs: (
+			rem(19.2px),
+			rem(24px)
+		)
+	),
+	para: (
+		l: (
+			rem(19.2px),
+			rem(31px)
+		),
+		m: (
+			rem(16px),
+			rem(27px)
+		),
+		s: (
+			rem(13.33px),
+			rem(21px)
+		)
+	),
+	anchor: (
+		l: (
+			rem(19.2px),
+			rem(31px)
+		),
+		m: (
+			rem(16px),
+			rem(27px)
+		),
+		s: (
+			rem(13.33px),
+			rem(21px)
+		)
+	),
+	button: (
+		m: (
+			rem(16px),
+			rem(22px)
+		),
+		s: (
+			rem(13.33px),
+			rem(19px)
+		)
+	)
+);
+
+/// Get font size and line height from nested font maps
+/// @author Tommy Scribble
+/// @param {String} $text-type - heading, para, anchor, button
+/// @param {String} $size - xl, l, m,s, xs
+/// @return {String} - font-size and line heihgt properties
+@mixin font-get($text-type, $size) {
+	@if map-has-key($fonts, $text-type) {
+		$value: map-deep-get($fonts, $text-type, $size);
+		@if type-of($value) == 'list' {
+			font-size: nth($value, 1);
+			@if (length($value) > 1) {
+				line-height: nth($value, 2);
+			}
+		} @else {
+			font-size: $value;
+		}
+	} @else {
+		@error "One of your font properties is probably wrong (type: #{$text-type}, size: #{$size}) please check the stylesheet";
+	}
+}

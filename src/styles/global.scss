@@ -27,41 +27,31 @@ h6 {
 }
 
 h1 {
-	font-size: 2.5rem;
+	@include font-get(heading, xl);
 	margin-bottom: 1.5rem;
-	line-height: 1.25;
 }
 
 h2 {
-	font-size: 2rem;
+	@include font-get(heading, l);
 	margin-bottom: 1rem;
-	line-height: 1.2;
 }
 
 h3 {
-	font-size: 1.75rem;
+	@include font-get(heading, m);
 	margin-bottom: 0.75rem;
-	line-height: 1.1;
 }
 
 h4 {
-	font-size: 1.5rem;
+	@include font-get(heading, s);
 	margin-bottom: 0.5rem;
-	line-height: 1;
 }
 
 h5 {
-	font-size: 1.25rem;
+	@include font-get(heading, xs);
 	margin-bottom: 0.25rem;
-	line-height: 1;
-}
-
-h6 {
-	font-size: 1rem;
-	margin-bottom: 0.25rem;
-	line-height: 1;
 }
 
 p {
+	@include font-get(para, m);
 	margin-bottom: 0.75rem;
 }
