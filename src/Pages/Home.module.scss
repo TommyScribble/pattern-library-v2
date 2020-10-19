@@ -30,9 +30,5 @@ html {
 }
 
 .link {
-	margin-bottom: 2rem;
-	margin-right: 2rem;
-	@media all and (max-width: $tablet) {
-		display: none;
-	}
+	display: block;
 }
