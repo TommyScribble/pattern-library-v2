@@ -4,14 +4,16 @@ import { uid } from '../../helpers/helpFunctions';
 
 type Props = {
 	listItems: string[];
+	ordered?: boolean;
 };
-const List = ({ listItems }: Props) => {
+const List = ({ listItems, ordered = false }: Props) => {
+	const Element = ordered ? 'ol' : 'ul';
 	return (
-		<ul>
+		<Element>
 			{listItems.map((listItem: string) => (
 				<li key={uid()}>{listItem}</li>
 			))}
-		</ul>
+		</Element>
 	);
 };
 
