@@ -1,36 +1,28 @@
-import React from 'react';
-import Anchor from '../Atoms/Anchor';
+import React, { useEffect, useState } from 'react';
+import marked from 'marked';
 
-import Heading from '../Atoms/Heading';
-import List from '../Atoms/List';
-import Text from '../Atoms/Text';
+import Anchor from '../Atoms/Anchor';
 
 import style from './About.module.scss';
 
-const appIncludes = [
-	'Typescript',
-	'Atomic components',
-	'Unit tests (Jest & React Testing Library)',
-	'CSS modules (using SCSS)',
-	'Base styles (globals/mixins/functions/component)',
-	'Folder structure',
-	'Linting (eslint/stylelint) - using precommmit hook',
-];
-
 const Readme = () => {
+	const [readmeText, setReadmeText] = useState('');
+
+	useEffect(() => {
+		fetch('README.md')
+			.then((response) => response.text())
+			.then((text) => setReadmeText(marked(text)));
+	}, []);
+
 	return (
 		<main className={style.aboutPage}>
-			<Heading
-				tagNumber={1}
-				headingText="React / Typescript Biolerplater"
-			/>
-			<Text>
-				This starter project is meant to get you up and running with all
-				the essentails to start building you project immediatley. It
-				contains all the basic building block to get started quickly and
-				safely.
-			</Text>
-			<List listItems={appIncludes} />
+			<Anchor path="/" linkType="internal">
+				Back to homepage
+			</Anchor>
+			<div
+				className={style.aboutPage__content}
+				dangerouslySetInnerHTML={{ __html: marked(readmeText) }}
+			></div>
 			<Anchor path="/" linkType="internal">
 				Back to homepage
 			</Anchor>
