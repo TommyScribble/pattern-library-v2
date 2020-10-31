@@ -10,13 +10,13 @@ input.checkbox[type= 'checkbox'] {
 		display: inline-block;
 		width: 18px;
 		height: 18px;
-		background-image: url('/static/icons/checkbox.svg');
+		background-image: url('../../Assets/checkboxes/checkbox.svg');
 		background-position: left;
 		background-size: 36px 18px;
 		margin-left: 18px;
 		vertical-align: middle;
 	}
-	
+
 	&:checked + label:after {
 		background-position: right;
 	}
