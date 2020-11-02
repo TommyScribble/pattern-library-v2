@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Heading from '../Atoms/Heading';
-import Text from '../Atoms/Text';
-import Anchor from '../Atoms/Anchor';
+import Heading from '../../Atoms/Heading';
+import Text from '../../Atoms/Text';
+import Anchor from '../../Atoms/Anchor';
 
 import styles from './Home.module.scss';
 

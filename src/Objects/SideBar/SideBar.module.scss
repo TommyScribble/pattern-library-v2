@@ -1,0 +1,69 @@
+@import '../../styles/variable', '../../styles/colours';
+
+.side-nav__item {
+	
+	.side-nav__link {
+		display: block;
+		padding: 0.6em 0.5em;
+		color: color-get(utility, white);  /* stylelint-disable-line  */
+		transition: all ease-out 0.6s;
+
+		&:hover {
+			background-color: rgba(166, 0, 22, 0.6);
+			transition: all ease 0.3s;
+		}
+
+		&.current {
+			background-color: rgba(166, 0, 22, 0.4);
+		}
+	}
+}
+
+.side-nav {
+	overflow: hidden;
+	height: 100%;
+	height: calc(100% + 60px);
+	height: -moz-calc(100%);
+	padding: 1rem;
+	list-style: none;
+	box-shadow: none;
+	background-color: color-get(brand, primary);
+	padding-bottom: 60px;
+	z-index: 999;
+	overflow-y: auto;
+
+	&.fixed {
+		position: fixed;
+		width: 300px;
+		margin: 0;
+		left: 0;
+		top: 0;
+		@media screen and (max-width: #{$tablet}px) {
+
+			&.js-close {
+				left: -300px;
+				transition: all 0.5s ease;
+			}
+
+			&.js-open {
+				left: 0;
+				transition: all 0.5s ease;
+			}
+		}
+	}
+
+	.version {
+		color: color-get(utility, white); /* stylelint-disable-line */
+		padding-top: 1em;
+		margin-bottom: 2em;
+		text-align: center;
+		border-bottom: 1px solid color-get(utility, white); /* stylelint-disable-line */
+	}
+
+	.side-nav__item {
+
+		&:last-child {
+			padding-bottom: 80px;
+		}
+	}
+}

@@ -1,7 +1,9 @@
 import IconObj from './IconObj';
- 
-const Icon = (props: {iconName: keyof typeof IconObj}): JSX.Element | null => {
-	const {iconName} = props;
+
+import { IconTypes } from '../../typings/types';
+
+const Icon = (props: IconTypes): JSX.Element | null => {
+	const { iconName } = props;
 	const iconType = IconObj[iconName];
 
 	if (iconType) return iconType;
@@ -10,6 +12,5 @@ const Icon = (props: {iconName: keyof typeof IconObj}): JSX.Element | null => {
 		return null;
 	}
 	return null;
-	
-}
+};
 export default Icon;

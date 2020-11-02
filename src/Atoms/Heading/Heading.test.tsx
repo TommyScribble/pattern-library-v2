@@ -11,11 +11,15 @@ it('renders without crashing', () => {
 });
 
 it('renders the correct heading element to the DOM', () => {
-	const {container} = render(<Header tagNumber={1} headingText={headingText} />);
+	const { container } = render(
+		<Header tagNumber={1} headingText={headingText} />
+	);
 	expect(container.querySelector('h1')).toBeInTheDocument();
 });
 
 it('renders the headingText to the DOM', () => {
-	const container = render(<Header tagNumber={1} headingText={headingText} />);
+	const container = render(
+		<Header tagNumber={1} headingText={headingText} />
+	);
 	expect(container.getByText('Test Heading')).toBeInTheDocument();
 });

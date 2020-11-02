@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import marked from 'marked';
 
-import Anchor from '../Atoms/Anchor';
+import Anchor from '../../Atoms/Anchor';
 
 import style from './About.module.scss';
 

@@ -10,10 +10,10 @@
 	font-size: font-get(button, m);
 
 	&.primary {
-		background-color: color-get(primary, brand);
+		background-color: color-get(brand, primary);
 	}
 
 	&.secondary {
-		background-color: color-get(primary, secondary);
+		background-color: color-get(brand, secondary);
 	}
 }
