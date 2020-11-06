@@ -1,10 +1,10 @@
 {
-	"Heading": "This pattern library is currently still under construction",
-	"Text": [
+	"heading": "This pattern library is currently still under construction",
+	"text": [
 		"Navigate using the sidebar to the element you would like to use to find out more",
 		"To get involved use one of the links below"
 	],
-	"Links": [
+	"links": [
 		{
 			"path": "/buttons",
 			"class": "button",

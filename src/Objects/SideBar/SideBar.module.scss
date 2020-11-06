@@ -1,24 +1,5 @@
 @import '../../styles/variable', '../../styles/colours';
 
-.side-nav__item {
-	
-	.side-nav__link {
-		display: block;
-		padding: 0.6em 0.5em;
-		color: color-get(utility, white);  /* stylelint-disable-line  */
-		transition: all ease-out 0.6s;
-
-		&:hover {
-			background-color: rgba(166, 0, 22, 0.6);
-			transition: all ease 0.3s;
-		}
-
-		&.current {
-			background-color: rgba(166, 0, 22, 0.4);
-		}
-	}
-}
-
 .side-nav {
 	overflow: hidden;
 	height: 100%;

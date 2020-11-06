@@ -1,8 +1,7 @@
 @import-normalize;
 @import-sanitize;
-@import 'colours', 'fonts', 'functions', 'mixins';
+@import 'colours', 'fonts', 'functions', 'mixins', 'variable';
 
-$basefont-size: 16px;
 
 body {
 	font-family: $ff-open-sans;

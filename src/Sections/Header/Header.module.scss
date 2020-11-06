@@ -1,6 +1,10 @@
 @import '../../styles/variable','../../styles/colours';
 
-.top-nav {
+.header {
+	margin-left: 300px;
+}
+
+.topNav {
 	position: relative;
 	padding: 2rem 1.5rem 1rem;
 
@@ -9,7 +13,7 @@
 		border-bottom: 2px solid color-get(utility, mid-grey);
 	}
 
-	.burger-menu {
+	.burgerMenu {
 		@media screen and (max-width: #{$tablet}px) {
 			position: absolute;
 			display: block;

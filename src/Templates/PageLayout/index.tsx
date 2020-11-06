@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Header from '../../Sections/Header';
+import Footer from '../../Sections/Footer';
 
-import style from './PageLayout.module.scss';
+import Main from '../../Sections/Main';
 
 type Props = {
 	children: JSX.Element[];
@@ -12,11 +13,8 @@ const PageLayout = ({ children }: Props) => {
 	return (
 		<>
 			<Header />
-			<main className={style['main-content']}>
-				<article className="article">
-					<div className="container">{children}</div>
-				</article>
-			</main>
+			<Main>{children}</Main>
+			<Footer />
 		</>
 	);
 };

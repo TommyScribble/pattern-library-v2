@@ -12,11 +12,11 @@ const Header = () => {
 	const [icon, updateIcon] = useState<IconTypes>({ iconName: 'Burger' });
 
 	return (
-		<header>
-			<nav className={style['top-nav']}>
+		<header className={style.header}>
+			<nav className={style.topNav}>
 				<Heading tagNumber={1} headingText={'ReactJs UI library'} />
 				<button
-					className={style['burger-menu']}
+					className={style.burgerMenu}
 					onClick={() =>
 						updateIcon((icon) =>
 							icon.iconName === 'Burger'
