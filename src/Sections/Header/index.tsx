@@ -14,7 +14,11 @@ const Header = () => {
 	return (
 		<header className={style.header}>
 			<nav className={style.topNav}>
-				<Heading tagNumber={1} headingText={'ReactJs UI library'} />
+				<Heading
+					className={style.title}
+					tagNumber={1}
+					headingText={'ReactJs UI library'}
+				/>
 				<button
 					className={style.burgerMenu}
 					onClick={() =>

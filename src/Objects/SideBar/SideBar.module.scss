@@ -1,6 +1,6 @@
 @import '../../styles/variable', '../../styles/colours';
 
-.side-nav {
+.sideBar {
 	overflow: hidden;
 	height: 100%;
 	height: calc(100% + 60px);
@@ -46,5 +46,10 @@
 		&:last-child {
 			padding-bottom: 80px;
 		}
+	}
+
+	.logo {
+		display: block;
+		width: 100%;
 	}
 }

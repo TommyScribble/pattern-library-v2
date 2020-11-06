@@ -8,9 +8,10 @@
 	position: relative;
 	padding: 2rem 1.5rem 1rem;
 
-	h1 {
+	.title {
 		padding-bottom: 1em;
 		border-bottom: 2px solid color-get(utility, mid-grey);
+		margin-top: 10.8px;
 	}
 
 	.burgerMenu {
