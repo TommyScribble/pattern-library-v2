@@ -4,7 +4,7 @@ import { Router } from '@reach/router';
 import Homepage from '../Pages/HomePage';
 import Buttons from '../Pages/buttons';
 import Accordion from '../Pages/accordion';
-import NotFound from '../Pages/notFound';
+import NotFound from '../Pages/Error';
 
 const Routes = () => {
 	return (
