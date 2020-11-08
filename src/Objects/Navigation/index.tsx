@@ -8,17 +8,16 @@ import style from './Navigation.module.scss';
 type Data = {
 	title: string;
 	path: string;
-	anchorClass: string;
 };
 
 const Navigation: any = () =>
 	NavData.map((item: Data, i) => {
 		return (
-			<li key={i} className={style['side-nav__item']}>
+			<li key={i} className={style['sideNav__item']}>
 				<Anchor
 					linkType="navigation"
 					path={item.path}
-					className={item.anchorClass}
+					className={style['sideNav__link']}
 				>
 					{item.title}
 				</Anchor>

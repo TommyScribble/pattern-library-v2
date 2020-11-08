@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Heading from '../../Atoms/Heading';
 import SideBar from '../../Objects/SideBar';
 import Icon from '../../Atoms/Icon';
+import Navigation from '../../Objects/Navigation';
 import { useBreakpoint } from '../../helpers/customHooks';
 
 import { IconTypes } from '../../typings/types';
@@ -35,7 +36,9 @@ const Header = () => {
 					</button>
 				)}
 			</nav>
-			<SideBar isActive={icon.iconName} />
+			<SideBar isActive={icon.iconName}>
+				<Navigation />
+			</SideBar>
 		</header>
 	);
 };

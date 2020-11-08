@@ -35,8 +35,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build && yarn copy:readme",
-		"copy:readme": "cp README.md public/README.md",
+		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},

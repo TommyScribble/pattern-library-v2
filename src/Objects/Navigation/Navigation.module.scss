@@ -1,12 +1,17 @@
 @import '../../styles/colours';
 
-.side-nav__item {
+.sideNav__item {
+
+	&:last-child {
+		padding-bottom: 80px;
+	}
 	
-	.side-nav__link {
+	.sideNav__link {
 		display: block;
 		padding: 0.6em 0.5em;
 		color: color-get(utility, white);  /* stylelint-disable-line  */
 		transition: all ease-out 0.6s;
+		text-decoration: none;
 
 		&:hover {
 			background-color: rgba(166, 0, 22, 0.6);

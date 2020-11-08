@@ -41,13 +41,6 @@
 		border-bottom: 1px solid color-get(utility, white); /* stylelint-disable-line */
 	}
 
-	.side-nav__item {
-
-		&:last-child {
-			padding-bottom: 80px;
-		}
-	}
-
 	.logo {
 		display: block;
 		width: 100%;
