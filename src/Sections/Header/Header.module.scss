@@ -1,7 +1,10 @@
 @import '../../styles/variable','../../styles/colours';
 
 .header {
-	margin-left: 300px;
+	@media screen and (min-width: #{$tablet}px) {
+		margin-left: 300px;
+	}
+	
 }
 
 .topNav {

@@ -1,7 +1,15 @@
+@import '../../styles/variable';
+
 .main {
 
 	.article {
 		padding: 0rem 1.5rem 3rem;
-		margin-left: 300px;
+	}
+
+	@media screen and (min-width: #{$tablet}px) {
+
+		.article {
+			margin-left: 300px;
+		}
 	}
 }

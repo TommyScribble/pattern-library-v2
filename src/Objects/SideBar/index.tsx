@@ -5,16 +5,16 @@ import Logo from '../../Atoms/Logo';
 import style from './SideBar.module.scss';
 
 type Props = {
-	active?: string | boolean;
+	isActive?: string | boolean;
 	children?: any;
 };
 
-const SideBar = ({ active, children }: Props) => {
+const SideBar = ({ isActive, children }: Props) => {
 	const [isOpen, setIsOpen] = useState(false);
 	useEffect(() => {
-		setIsOpen(active === 'Burger1' ? false : true);
-	}, [active]);
-	const openClass = isOpen === true ? 'js-open' : 'js-close';
+		setIsOpen(isActive === 'Burger' ? false : true);
+	}, [isActive]);
+	const openClass = isOpen === true ? style['js-open'] : style['js-close'];
 
 	const myLogo = './scribble_logo--white.png';
 	const versionNo = 'Version 1.0.0';

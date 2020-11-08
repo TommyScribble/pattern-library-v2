@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-	return <footer>THE AMAZING FOOTER</footer>;
+	return <footer></footer>;
 };
 
 export default Footer;
