@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import AccordionItem from './AccordionItem';
 
+import { IconTypes, ValueOf } from '../../typings/types';
+
 import style from './Accordion.module.scss';
 //TODO: add functionlity to choose initally open section + fisisOpen eRror...
 type Props = {
 	allowMultipleOpen?: boolean;
 	children: any;
-	icon: 'Burger' | 'Cross' | 'Delete';
+	icon: ValueOf<IconTypes>;
 	btnClass?: string;
 	contentClass?: string;
 };
@@ -24,6 +26,7 @@ const Accordion: React.FC<Props> = ({
 	contentClass,
 }: Props) => {
 	const [accordionItems, setAccordionItems] = useState<SectionShape>({});
+	console.log('CHILDS', children.lengh);
 
 	useEffect(() => {
 		const getAllSections = () => {

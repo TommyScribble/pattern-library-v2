@@ -1,39 +1,42 @@
 @import '../../styles/colours';
 
 .accordion {
+	list-style: none;
 	width: 100%;
+	padding-left: 0px;
+	margin: 0;
+}
 
-	.accordion-item {
-		margin-bottom: 0.6em;
+.accordion-item {
+	margin-bottom: 0.6em;
 
-		&__button {
-			background-color: color-get(utility, dark-grey);
-			width: 100%;
-			padding-top: 1em;
-			padding-bottom: 1em;
-			padding-left: 1.5em;
-			border: none;
-			color: color-get(utility, white);  /* stylelint-disable-line */
-			text-align: left;
-			text-transform: uppercase;
-			font-weight: 600;
-			font-size: 1em;
-			cursor: pointer;
-			transition: background-color 0.33s ease;
+	&__button {
+		background-color: color-get(utility, dark-grey);
+		width: 100%;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		padding-left: 1.5em;
+		border: none;
+		color: color-get(utility, white);  /* stylelint-disable-line */
+		text-align: left;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 1em;
+		cursor: pointer;
+		transition: background-color 0.33s ease;
 
-			&.active {
-				background-color: darken(color-get(utility, dark-grey), 30%);
-			}
+		&.active {
+			background-color: darken(color-get(utility, dark-grey), 30%);
 		}
+	}
 
-		&__background {
-			background-color: color-get(utility, light-grey);
-			overflow: hidden;
-			transition: max-height 0.6s ease-out;
+	&__background {
+		background-color: color-get(utility, light-grey);
+		overflow: hidden;
+		transition: max-height 0.6s ease-out;
 
-			.content {
-				padding: 1em 1.5em;
-			}
+		.content {
+			padding: 1em 1.5em;
 		}
 	}
 }

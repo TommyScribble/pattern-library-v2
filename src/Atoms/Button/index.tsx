@@ -9,14 +9,13 @@ type Props = {
 	onClick?: (event: any) => void;
 };
 
-const Button = ({
-	type,
-	btnClass,
-	children,
-	onClick
-}: Props) => {
+const Button = ({ type = 'button', btnClass, children, onClick }: Props) => {
 	return (
-		<button type={type} className={`${style.btn} ${style[btnClass]}`} onClick={onClick}>
+		<button
+			type={type}
+			className={`${style.btn} ${style[btnClass]}`}
+			onClick={onClick}
+		>
 			{children}
 		</button>
 	);

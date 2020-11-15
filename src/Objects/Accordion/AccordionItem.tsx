@@ -8,7 +8,7 @@ type Props = {
 	title: string;
 	children: any;
 	updateAccordionItems: (title: string, isOpen: boolean) => void;
-	icon: 'Burger' | 'Cross' | 'Delete';
+	icon: any;
 	btnClass?: string;
 	contentClass?: string;
 	isOpen: boolean;

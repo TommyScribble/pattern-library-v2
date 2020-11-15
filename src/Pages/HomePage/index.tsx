@@ -7,7 +7,7 @@ import Anchor from '../../Atoms/Anchor';
 import { uid } from '../../helpers/helpFunctions';
 
 import content from '../../../src/PageData/HomepageData.json';
-import style from './Homepage.module.scss';
+import style from './homepage.module.scss';
 
 const homepage = () => {
 	return (
