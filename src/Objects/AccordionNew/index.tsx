@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Accordion = (props: any) => {
-	return <div>ta daaa</div>;
+const Accordion = ({ children }: any) => {
+	return <div>{children}</div>;
 };
 
 export default Accordion;
