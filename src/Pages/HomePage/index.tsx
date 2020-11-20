@@ -7,7 +7,7 @@ import Anchor from '../../Atoms/Anchor';
 import { uid } from '../../helpers/helpFunctions';
 
 import content from '../../../src/PageData/HomepageData.json';
-// import style from './homepage.module.scss';
+import style from './homepage.module.scss';
 
 const homepage = () => {
 	return (
@@ -22,7 +22,7 @@ const homepage = () => {
 						<Anchor
 							key={uid()}
 							path={link.path}
-							// className={style.homepageButton}
+							className={style.links}
 							linkType={link.linkType}
 						>
 							{link.text}
