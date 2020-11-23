@@ -13,3 +13,5 @@
 - Add first page outline and create template from it for other pages
 - Update packages (upgrade-interactive)
 - Fix minor errors with custom hooks
+- Animate page tranistions
+- Animate mobile nav close when navigating to a page
