@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router } from '@reach/router';
 
-import Homepage from '../Pages/HomePage';
+import Homepage from '../Pages';
 import Buttons from '../Pages/Buttons';
 import Accordion from '../Pages/accordion';
 import NotFound from '../Pages/Error';

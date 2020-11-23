@@ -1,13 +1,13 @@
 import React from 'react';
 
-import PageLayout from '../../Templates/PageLayout';
-import Heading from '../../Atoms/Heading';
-import Text from '../../Atoms/Text';
-import Anchor from '../../Atoms/Anchor';
-import { uid } from '../../helpers/helpFunctions';
+import PageLayout from '../Templates/PageLayout';
+import Heading from '../Atoms/Heading';
+import Text from '../Atoms/Text';
+import Anchor from '../Atoms/Anchor';
+import { uid } from '../helpers/helpFunctions';
 
-import content from '../../../src/PageData/HomepageData.json';
-import style from './homepage.module.scss';
+import content from '../PageData/HomepageData.json';
+import style from '../styles/page/homepage.module.scss';
 
 const homepage = () => {
 	return (
