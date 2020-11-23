@@ -1,7 +1,7 @@
 import React from 'react';
-import PageLayout from '../Templates/PageLayout';
-import Accordion from '../Objects/Accordion/Accordion';
-import Heading from '../Atoms/Heading';
+import PageLayout from '../../Templates/PageLayout';
+import Accordion from '../../Objects/Accordion/Accordion';
+import Heading from '../../Atoms/Heading';
 
 const accordion = (props) => {
 	return (

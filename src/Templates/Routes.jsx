@@ -3,7 +3,7 @@ import { Router } from '@reach/router';
 
 import Homepage from '../Pages';
 import Buttons from '../Pages/Buttons';
-import Accordion from '../Pages/accordion';
+import Accordion from '../Pages/accordions';
 import NotFound from '../Pages/Error';
 
 const Routes = () => {

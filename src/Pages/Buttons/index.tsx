@@ -5,7 +5,7 @@ import Button from '../../Atoms/Button';
 import Heading from '../../Atoms/Heading';
 import Accordion from '../../Objects/Accordion/Accordion';
 
-import style from './button.module.scss';
+import style from '../../styles/page/button.module.scss';
 
 const buttons = () => {
 	return (

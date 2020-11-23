@@ -1,13 +1,15 @@
-@import '../../styles/mixins', '../../styles/colours';
+@import '../../styles/mixins', '../../styles/colours', '../../styles/fonts';
 
 .btn {
+	@include font-get(button, s);
 	display: inline-block;
 	padding: rem(15px) rem(32px);
 	border: none;
+	border-radius: rem(2px);
 	color: color-get(utility, white); /* stylelint-disable-line */
 	text-align: center;
 	text-decoration: none;
-	font-size: font-get(button, m);
+	cursor: pointer;
 
 	&.primary {
 		background-color: color-get(brand, primary);
@@ -15,5 +17,24 @@
 
 	&.secondary {
 		background-color: color-get(brand, secondary);
+	}
+
+	&.line {
+		border: 1px solid color-get(brand, primary);
+		background-color: transparent;
+		color: color-get(brand, primary);
+	}
+
+	&.link {
+		padding: 0;
+		background-color: transparent;
+		color: color-get(brand, primary);
+		text-decoration: underline;
+	}
+
+	&.disabled {
+		background-color: color-get(utility, light-grey);
+		color: color-get(text, copy);
+		pointer-events: none;
 	}
 }
