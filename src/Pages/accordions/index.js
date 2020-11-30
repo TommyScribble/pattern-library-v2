@@ -10,7 +10,7 @@ const accordion = (props) => {
 			<Heading tagNumber={3} headingText={'Single Open'} />
 			<Accordion
 				isOpen={false}
-				icon={'CaretUp'}
+				icon={'Caret'}
 				contentClass={'content-class'}
 				btnClass={'button-class'}
 			>

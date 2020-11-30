@@ -1,4 +1,4 @@
-@import '../../styles/colours';
+@import '../../styles/colours', '../../styles/mixins';
 
 .accordion {
 	list-style: none;
@@ -57,6 +57,7 @@
 
 		svg {
 			stroke: color-get(utility, white); /* stylelint-disable-line */
+			width: rem(24px);
 		}
 	}
 }
