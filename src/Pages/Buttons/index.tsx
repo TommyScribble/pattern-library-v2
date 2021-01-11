@@ -17,7 +17,12 @@ const buttons = () => {
 			/>
 			<Text>Some descriptive text needs to go here</Text>
 			<Accordion icon="Caret">
-				<div title="First">Some content</div>
+				<div
+					title="First"
+					data-btnChild={<Button btnClass="primary">Primary</Button>}
+				>
+					Some content
+				</div>
 				<div title="second">More content here</div>
 			</Accordion>
 			<Button btnClass={'primary'}>Primary</Button>

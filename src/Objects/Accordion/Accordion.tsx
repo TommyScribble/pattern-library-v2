@@ -26,12 +26,12 @@ const Accordion: React.FC<Props> = ({
 	contentClass,
 }: Props) => {
 	const [accordionItems, setAccordionItems] = useState<SectionShape>({});
-	console.log('CHILDS', children.lengh);
+	const kids = !Array.isArray(children) ? [children] : children;
 
 	useEffect(() => {
 		const getAllSections = () => {
 			const obj: SectionShape = {};
-			children.forEach((child: any) => {
+			kids.forEach((child: any) => {
 				obj[child.props.title] = false;
 			});
 			return obj;
@@ -56,12 +56,13 @@ const Accordion: React.FC<Props> = ({
 
 	return (
 		<ul className={style.accordion}>
-			{children.map((child: any, i: number) => {
+			{kids.map((child: any, i: number) => {
 				return (
 					<AccordionItem
 						key={i}
 						isOpen={accordionItems[child.props.title]}
 						title={child.props.title}
+						btnChild={child.props['data-btnChild']}
 						updateAccordionItems={updateAccordionItems}
 						icon={icon}
 						btnClass={btnClass}

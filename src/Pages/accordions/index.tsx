@@ -3,13 +3,32 @@ import PageLayout from '../../Templates/PageLayout';
 import Accordion from '../../Objects/Accordion/Accordion';
 import Heading from '../../Atoms/Heading';
 
-const accordion = (props) => {
+const accordion = () => {
 	return (
 		<PageLayout>
 			<Heading tagNumber={2} headingText={'Accordions'} />
-			<Heading tagNumber={3} headingText={'Single Open'} />
+			<Heading tagNumber={3} headingText={'Single accordion item'} />
 			<Accordion
-				isOpen={false}
+				icon={'Caret'}
+				contentClass={'content-class'}
+				btnClass={'button-class'}
+			>
+				<div title={'Alligator Mississippiensis-01'}>
+					<div>
+						<strong>Common Name:</strong> American Alligator
+					</div>
+					<div>
+						<strong>Distribution:</strong> Texas to North Carolina,
+						United States
+					</div>
+					<div>
+						<strong>Endangered Status:</strong> Currently Not
+						Endangered
+					</div>
+				</div>
+			</Accordion>
+			<Heading tagNumber={3} headingText={'Single accordion open'} />
+			<Accordion
 				icon={'Caret'}
 				contentClass={'content-class'}
 				btnClass={'button-class'}
@@ -40,12 +59,8 @@ const accordion = (props) => {
 					</div>
 				</div>
 			</Accordion>
-			<Heading
-				tagNumber={3}
-				headingText={'Multiple Open'}
-				isOpen={false}
-			/>
-			<Accordion allowMultipleOpen>
+			<Heading tagNumber={3} headingText={'Multiple accrdion open'} />
+			<Accordion allowMultipleOpen icon={'Caret'}>
 				<div title={'Alligator Mississippiensis-11'}>
 					<div>
 						<strong>Common Name:</strong> American Alligator

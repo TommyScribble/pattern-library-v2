@@ -12,6 +12,7 @@ type Props = {
 	btnClass?: string;
 	contentClass?: string;
 	isOpen: boolean;
+	btnChild?: any;
 };
 
 const AccordionItem: React.FC<Props> = ({
@@ -22,6 +23,7 @@ const AccordionItem: React.FC<Props> = ({
 	btnClass,
 	contentClass,
 	isOpen,
+	btnChild,
 }: Props) => {
 	const accordionRef = useRef<any>();
 
@@ -58,6 +60,7 @@ const AccordionItem: React.FC<Props> = ({
 				onClick={() => handleSectionClick(title, sectionOpen)}
 			>
 				{title}
+				{btnChild && btnChild}
 				{icon && (
 					<div className={`${style.icon} ${style.rotate}`}>
 						<Icon iconName={icon} />
