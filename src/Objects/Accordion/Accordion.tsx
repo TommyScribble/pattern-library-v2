@@ -11,6 +11,7 @@ type Props = {
 	children: any;
 	icon: ValueOf<IconTypes>;
 	btnClass?: string;
+	btnChildStyle?: string;
 	contentClass?: string;
 };
 
@@ -23,6 +24,7 @@ const Accordion: React.FC<Props> = ({
 	children,
 	icon,
 	btnClass,
+	btnChildStyle,
 	contentClass,
 }: Props) => {
 	const [accordionItems, setAccordionItems] = useState<SectionShape>({});
@@ -66,6 +68,7 @@ const Accordion: React.FC<Props> = ({
 						updateAccordionItems={updateAccordionItems}
 						icon={icon}
 						btnClass={btnClass}
+						btnChildStyle={btnChildStyle}
 						contentClass={contentClass}
 					>
 						{child.props.children}

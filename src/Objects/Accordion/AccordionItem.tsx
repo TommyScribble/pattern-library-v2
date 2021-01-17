@@ -10,6 +10,7 @@ type Props = {
 	updateAccordionItems: (title: string, isOpen: boolean) => void;
 	icon: any;
 	btnClass?: string;
+	btnChildStyle?: string;
 	contentClass?: string;
 	isOpen: boolean;
 	btnChild?: any;
@@ -21,6 +22,7 @@ const AccordionItem: React.FC<Props> = ({
 	updateAccordionItems,
 	icon,
 	btnClass,
+	btnChildStyle,
 	contentClass,
 	isOpen,
 	btnChild,
@@ -59,8 +61,19 @@ const AccordionItem: React.FC<Props> = ({
 				className={`${style['accordion-item__button']} ${btnClass} ${activeBtn}`}
 				onClick={() => handleSectionClick(title, sectionOpen)}
 			>
-				{title}
-				{btnChild && btnChild}
+				<div className={style['button-content']}>
+					<div className={style['button-content__title']}>
+						{title}
+					</div>
+					{btnChild && (
+						<div
+							className={`${style['button-content__child']} ${btnChildStyle}`}
+						>
+							{btnChild}
+						</div>
+					)}
+				</div>
+
 				{icon && (
 					<div className={`${style.icon} ${style.rotate}`}>
 						<Icon iconName={icon} />

@@ -9,6 +9,6 @@ it('renders without crashing', () => {
 	expect(container).toBeInTheDocument;
 });
 
-it('button opens accordiom when clicked', () => {});
+it('when the button is clicked it shows accordion content', () => {});
 
-it('button closes accordiom when clicked', () => {});
+it('when the button is clicked it hides accordion content', () => {});
