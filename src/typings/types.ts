@@ -1,12 +1,13 @@
 export type ValueOf<T> = T[keyof T];
 
 export type IconTypes = {
-	iconName: 'Burger' | 'Cross' | 'Caret' | 'Delete';
+	iconName: 'Burger' | 'Cross' | 'Copy' | 'Caret' | 'Delete';
 };
 
 export enum Icons {
 	Burger = 'Burger',
 	Cross = 'Cross',
+	Copy = 'Copy',
 	Caret = 'Caret',
 	Delete = 'Delete',
 }
