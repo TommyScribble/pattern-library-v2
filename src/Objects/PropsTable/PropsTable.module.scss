@@ -1,0 +1,23 @@
+@import '../../styles/colours', '../../styles/variable';
+
+.propsTable {
+	width: 100%;
+
+	&__row {
+		border-bottom: 1px solid color-get(utility, xlight-grey);
+	}
+}
+
+.headerItem {
+	width: 20%;
+	padding: $base-spacing-unit * 3;
+	text-align: left;
+
+	&:last-of-type {
+		width: 40%;
+	}
+}
+
+.dataItem {
+	padding: $base-spacing-unit * 3;
+}

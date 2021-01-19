@@ -1,8 +1,9 @@
-@import '../../styles/variable';
+@import '../../styles/variable', '../../styles//mixins';
 
 .main {
 
 	.article {
+		max-width: rem(960px);
 		padding: 0rem 1.5rem 3rem;
 	}
 

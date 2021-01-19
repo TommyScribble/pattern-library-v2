@@ -7,15 +7,10 @@ import Text from '../../Atoms/Text';
 import Button from '../../Atoms/Button';
 import Heading from '../../Atoms/Heading';
 import Accordion from '../../Objects/Accordion/Accordion';
+import PropsTable from '../../Objects/PropsTable';
 
 import content from '../../PageData/ButtonspageData.json';
 import style from '../../styles/page/button.module.scss';
-
-const primaryButton = '<Button btnClass="primary">Primary</Button>';
-const secondaryButton = '<Button btnClass="secondary">Seconday</Button>';
-const lineButton = '<Button btnClass="line">Line</Button>';
-const linkButton = '<Button btnClass="link">Link</Button>';
-const disabledButton = '<Button btnClass="disabled">Disabled</Button>';
 
 const buttons = () => {
 	return (
@@ -56,12 +51,17 @@ const buttons = () => {
 				importance of completing a step. When they show a blocked state
 				a clear path must be show to escape it.
 			</Text>
+			<Heading
+				tagNumber={3}
+				headingText="Component example accordions"
+				className={style.heading}
+			/>
 			<Accordion
 				icon="Caret"
 				btnChildStyle={style.accordionBtn}
 				allowMultipleOpen={true}
 			>
-				{content.map((item) => {
+				{content.accordion.map((item) => {
 					return (
 						<div
 							key={item.title}
@@ -79,7 +79,12 @@ const buttons = () => {
 					);
 				})}
 			</Accordion>
-			{/* <PropsTable></PropsTable> */}
+			<Heading
+				tagNumber={3}
+				headingText="Props table"
+				className={style.heading}
+			/>
+			<PropsTable content={content.props} />
 		</PageLayout>
 	);
 };

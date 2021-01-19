@@ -1,9 +1,11 @@
+@import './mixins';
+
 // Breakpoints
 $tablet: 768;
 $desktop: 1200;
 
 // Spacing
-$base-spacing-unit: 5px;
+$base-spacing-unit: rem(5px);
 
 // Fonts
 $basefont-size: 16px;

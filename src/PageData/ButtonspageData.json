@@ -1,32 +1,60 @@
-[
-	{
-		"title": "Primary button",
-		"btnClass": "primary",
-		"btnText": "Primary",
-		"btnExample": "<Button btnClass='primary'>Primary</Button>"
-	},
-	{
-		"title": "Secondary button",
-		"btnClass": "secondary",
-		"btnText": "Secondary",
-		"btnExample": "<Button btnClass='secondary'>Secondary</Button>"
-	},
-	{
-		"title": "Line button",
-		"btnClass": "line",
-		"btnText": "Line",
-		"btnExample": "<Button btnClass='line'>Line</Button>"
-	},
-	{
-		"title": "Link button",
-		"btnClass": "link",
-		"btnText": "Link",
-		"btnExample": "<Button btnClass='link'>Link</Button>"
-	},
-	{
-		"title": "Disabled button",
-		"btnClass": "disabled",
-		"btnText": "Disabled",
-		"btnExample": "<Button btnClass='disabled'>Disabled</Button>"
-	}
-]
+{
+	"accordion": [
+		{
+			"title": "Primary button",
+			"btnClass": "primary",
+			"btnText": "Primary",
+			"btnExample": "<Button btnClass='primary'>Primary</Button>"
+		},
+		{
+			"title": "Secondary button",
+			"btnClass": "secondary",
+			"btnText": "Secondary",
+			"btnExample": "<Button btnClass='secondary'>Secondary</Button>"
+		},
+		{
+			"title": "Line button",
+			"btnClass": "line",
+			"btnText": "Line",
+			"btnExample": "<Button btnClass='line'>Line</Button>"
+		},
+		{
+			"title": "Link button",
+			"btnClass": "link",
+			"btnText": "Link",
+			"btnExample": "<Button btnClass='link'>Link</Button>"
+		},
+		{
+			"title": "Disabled button",
+			"btnClass": "disabled",
+			"btnText": "Disabled",
+			"btnExample": "<Button btnClass='disabled'>Disabled</Button>"
+		}
+	],
+	"props": [
+		{
+			"name": "type",
+			"required": "No",
+			"type": "'submit' | 'reset' | 'button'",
+			"description": "Defaults to 'button', sets the button type"
+		},
+		{
+			"name": "btnClass",
+			"required": "Yes",
+			"type": "String",
+			"description": "A custom class to enable custom button styling"
+		},
+		{
+			"name": "children",
+			"required": "Yes",
+			"type": "Any",
+			"description": "The content of a button, usually the label"
+		},
+		{
+			"name": "onClick",
+			"required": "No",
+			"type": "(event: any) => void",
+			"description": "The onClick function for any actions the button should complete"
+		}
+	]
+}
