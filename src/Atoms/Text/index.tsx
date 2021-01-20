@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 type Props = {
 	children: string;
@@ -8,10 +7,6 @@ type Props = {
 
 const Text = ({ children, className }: Props) => {
 	return <p className={className}>{children}</p>;
-};
-
-Text.propTypes = {
-	children: PropTypes.string.isRequired,
 };
 
 export default Text;

@@ -24,3 +24,21 @@ export type HomepageData = {
 		}[];
 	};
 };
+
+export type ComponentPageProps = {
+	content: {
+		description: string[];
+		accordion: {
+			title: string;
+			btnClass: string;
+			btnText: string;
+			btnExample: string;
+		}[];
+		props: {
+			name: string;
+			required: string;
+			type: string;
+			description: string;
+		}[];
+	};
+};

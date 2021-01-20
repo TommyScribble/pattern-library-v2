@@ -17,6 +17,7 @@ const homepage = () => {
 				{content.text.map((item: any) => {
 					return <Text key={uid()}>{item}</Text>;
 				})}
+
 				{content.links.map((link: any) => {
 					return (
 						<Anchor
