@@ -12,13 +12,12 @@ export enum Icons {
 	Delete = 'Delete',
 }
 
-export type HomepageData = {
+export type HomepageProps = {
 	content: {
-		Heading: string;
-		Text: string[];
-		Links: {
+		heading: string;
+		text: string[];
+		links: {
 			path: string;
-			class: string;
 			linkType: string;
 			text: string;
 		}[];

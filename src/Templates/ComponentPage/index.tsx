@@ -11,7 +11,7 @@ import PropsTable from '../../Objects/PropsTable';
 import { uid } from '../../helpers/helpFunctions';
 import { ComponentPageProps } from '../../typings/types';
 
-import style from '../../styles/page/button.module.scss';
+import style from './componentpage.module.scss';
 
 const ComponentPage = ({ content }: ComponentPageProps) => {
 	return (
