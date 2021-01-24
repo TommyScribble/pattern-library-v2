@@ -1,6 +1,5 @@
 {
 	"description": [
-		"Buttons come in multiple flavours to help communicate an action that will occur to users. They contain a text label to communicate the action and can also contain icons (coming soon). Make sure to use the correct one for your use case.",
 		"Primary buttons are used for the most important actions, positive and progressive. It should be used to help guide users to pick the correct action but dont use to many Primary buttons or the user will not unserstand what to choose.",
 		"Secondary buttons should be used to in conjunction with primary buttons to commincate a choice. In effect they should be the second most used button.",
 		"Line buttons (or tertiary buttons) can be used interchangably with secondary buttons when needed.",
