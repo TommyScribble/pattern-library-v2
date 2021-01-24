@@ -11,7 +11,7 @@ const useBreakpoint = (size: number, type = 'min') => {
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
-	});
+	}, [size, type]);
 
 	return type === 'min'
 		? widthOnLoad || widthOnResize > size
@@ -30,7 +30,7 @@ const getScrollPosition = (element?: any, useWindow?: boolean) => {
 };
 
 const useScrollPosition = (
-	effect: ({}) => void,
+	effect: (args: {}) => void,
 	dependencies?: any,
 	element?: HTMLElement,
 	useWindow?: any,
@@ -48,6 +48,7 @@ const useScrollPosition = (
 		const handleScroll = () => {
 			if (wait) {
 				if (throttleTimeout === null) {
+					// eslint-disable-next-line
 					throttleTimeout = setTimeout(callBack, wait);
 				}
 			} else {

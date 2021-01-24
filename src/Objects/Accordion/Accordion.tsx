@@ -28,7 +28,7 @@ const Accordion: React.FC<Props> = ({
 	contentClass,
 }: Props) => {
 	const [accordionItems, setAccordionItems] = useState<SectionShape>({});
-	const kids = !Array.isArray(children) ? [children] : children;
+	const kids: any[] | any = !Array.isArray(children) ? [children] : children;
 
 	useEffect(() => {
 		const getAllSections = () => {
@@ -39,7 +39,7 @@ const Accordion: React.FC<Props> = ({
 			return obj;
 		};
 		setAccordionItems(getAllSections());
-	}, [children]);
+	}, [kids]);
 
 	const closeAllSections = () => {
 		Object.keys(accordionItems).forEach((item) => {
