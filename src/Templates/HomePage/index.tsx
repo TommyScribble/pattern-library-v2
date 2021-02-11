@@ -23,7 +23,7 @@ const HomePage = ({ content }: HomepageProps) => {
 						<Anchor
 							key={uid()}
 							path={link.path}
-							className={style.links}
+							anchorClass={style.links}
 							linkType={link.linkType}
 						>
 							{link.text}

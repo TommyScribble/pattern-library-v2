@@ -5,17 +5,17 @@ import style from './NavLink.module.scss';
 
 type Props = {
 	to: string;
-	className?: string;
+	linkClass?: string;
 	onClick?: any;
 	children: any;
 };
 
-const NavLink = ({ to, className, onClick, children }: Props) => {
+const NavLink = ({ to, linkClass, onClick, children }: Props) => {
 	const location = useLocation();
-	if (location.pathname === to) className = `${className} ${style.current}`;
+	if (location.pathname === to) linkClass = `${linkClass} ${style.current}`;
 
 	return (
-		<Link to={to} onClick={onClick} className={className}>
+		<Link to={to} onClick={onClick} className={linkClass}>
 			{children}
 		</Link>
 	);

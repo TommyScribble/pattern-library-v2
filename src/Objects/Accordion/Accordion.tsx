@@ -9,7 +9,7 @@ import style from './Accordion.module.scss';
 type Props = {
 	allowMultipleOpen?: boolean;
 	children: any;
-	icon: ValueOf<IconTypes>;
+	icon?: ValueOf<IconTypes>;
 	btnClass?: string;
 	btnChildStyle?: string;
 	contentClass?: string;
@@ -39,7 +39,8 @@ const Accordion: React.FC<Props> = ({
 			return obj;
 		};
 		setAccordionItems(getAllSections());
-	}, [kids]);
+		// eslint-disable-next-line
+	}, [children]);
 
 	const closeAllSections = () => {
 		Object.keys(accordionItems).forEach((item) => {

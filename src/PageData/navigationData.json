@@ -5,43 +5,99 @@
 		"anchorClass": "side-nav__link"
 	},
 	{
-		"title": "Buttons",
-		"path": "/buttons",
-		"anchorClass": "side-nav__link"
+		"title": "Base",
+		"path": "/base",
+		"anchorClass": "side-nav__link",
+		"childLinks": [
+			{
+				"title": "Colours",
+				"path": "/base/colours",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Typography",
+				"path": "/base/typography",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Spacing",
+				"path": "/base/spacing",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Box Shadows",
+				"path": "/base/box-shadows",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Transitions",
+				"path": "/base/transitions",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Z-index",
+				"path": "/base/z-index",
+				"anchorClass": "side-nav__link"
+			}
+		]
 	},
 	{
-		"title": "Accordion",
-		"path": "/accordion",
-		"anchorClass": "side-nav__link"
+		"title": "Guidelines",
+		"path": "/guidelines",
+		"anchorClass": "side-nav__link",
+		"childLinks": [
+			{
+				"title": "Accessability",
+				"path": "/guidelines/accessability",
+				"anchorClass": "side-nav__link"
+			}
+		]
 	},
 	{
-		"title": "Text",
-		"path": "/text",
-		"anchorClass": "side-nav__link"
-	},
-	{
-		"title": "Icons",
-		"path": "/icons",
-		"anchorClass": "side-nav__link"
-	},
-	{
-		"title": "Progress Bar",
-		"path": "/progress-bar",
-		"anchorClass": "side-nav__link"
-	},
-	{
-		"title": "Spinner",
-		"path": "/spinner",
-		"anchorClass": "side-nav__link"
-	},
-	{
-		"title": "Tooltip",
-		"path": "/tooltip",
-		"anchorClass": "side-nav__link"
-	},
-	{
-		"title": "Checkbox",
-		"path": "/checkbox",
-		"anchorClass": "side-nav__link"
+		"title": "Atoms",
+		"path": "/atoms",
+		"anchorClass": "side-nav__link",
+		"childLinks": [
+			{
+				"title": "Buttons",
+				"path": "/atoms/buttons",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Accordion",
+				"path": "/atoms/accordion",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Text",
+				"path": "/atoms/text",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Icons",
+				"path": "/atoms/icons",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Progress Bar",
+				"path": "/atoms/progress-bar",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Spinner",
+				"path": "/atoms/spinner",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Tooltip",
+				"path": "/atoms/tooltip",
+				"anchorClass": "side-nav__link"
+			},
+			{
+				"title": "Checkbox",
+				"path": "/atoms/checkbox",
+				"anchorClass": "side-nav__link"
+			}
+		]
 	}
 ]

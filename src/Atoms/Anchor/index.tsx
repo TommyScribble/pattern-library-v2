@@ -5,10 +5,9 @@ import NavLink from '../NavLink';
 
 import style from './Anchor.module.scss';
 
-
 type Props = {
 	path: string;
-	className?: string;
+	anchorClass?: string;
 	disabled?: boolean;
 	linkType?: 'internal' | 'navigation';
 	children?: any;
@@ -17,11 +16,11 @@ type Props = {
 
 const Anchor = ({
 	path,
-	className,
+	anchorClass,
 	disabled,
 	linkType,
 	children,
-	rel
+	rel,
 }: Props) => {
 	let buttonAnchor: JSX.Element;
 
@@ -36,21 +35,36 @@ const Anchor = ({
 	switch (linkType) {
 		case 'internal':
 			buttonAnchor = (
-				<Link to={path} className={`${style.anchor} ${isDisabled} ${className}`} onClick={handleClick} rel={rel}>
+				<Link
+					to={path}
+					className={`${style.anchor} ${isDisabled} ${anchorClass}`}
+					onClick={handleClick}
+					rel={rel}
+				>
 					{children}
 				</Link>
 			);
 			break;
 		case 'navigation':
 			buttonAnchor = (
-				<NavLink to={path} className={`${style.anchor} ${isDisabled} ${className}`} onClick={handleClick}>
+				<NavLink
+					to={path}
+					linkClass={`${style.anchor} ${isDisabled} ${anchorClass}`}
+					onClick={handleClick}
+				>
 					{children}
 				</NavLink>
 			);
 			break;
 		default:
 			buttonAnchor = (
-				<a href={path} className={`${style.anchor} ${isDisabled} ${className}`} onClick={handleClick} target="_blank" rel="noopener noreferrer">
+				<a
+					href={path}
+					className={`${style.anchor} ${isDisabled} ${anchorClass}`}
+					onClick={handleClick}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					{children}
 				</a>
 			);

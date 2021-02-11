@@ -2,16 +2,16 @@ import React from 'react';
 import { Router } from '@reach/router';
 
 import Homepage from '../Pages';
-import Buttons from '../Pages/Buttons';
-import Accordion from '../Pages/accordions';
+import Buttons from '../Pages/atoms/buttons';
+import Accordion from '../Pages/atoms/accordions';
 import NotFound from '../Pages/Error';
 
 const Routes = () => {
 	return (
 		<Router>
 			<Homepage path="/" />
-			<Buttons path="/buttons" />
-			<Accordion path="/accordion" />
+			<Buttons path="/atoms/buttons" />
+			<Accordion path="/atoms/accordion" />
 			<NotFound default={true} />
 		</Router>
 	);

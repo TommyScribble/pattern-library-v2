@@ -16,7 +16,7 @@ const SideBar = ({ isActive, children }: Props) => {
 	}, [isActive]);
 	const openClass = isOpen === true ? style['js-open'] : style['js-close'];
 
-	const myLogo = './scribble_logo--white.png';
+	const myLogo = '/scribble_logo--white.png';
 	const versionNo = 'Version 1.0.0';
 	const currentYear = new Date().getFullYear();
 

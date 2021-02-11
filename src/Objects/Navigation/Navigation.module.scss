@@ -1,25 +1,34 @@
-@import '../../styles/colours';
+@import '../../styles/mixins', '../../styles/colours', '../../styles/fonts';
 
-.sideNav__item {
+.side-nav__item {
+	padding: 0;
 
 	&:last-child {
-		padding-bottom: 80px;
+		padding-bottom: rem(80px);
 	}
 	
-	.sideNav__link {
-		display: block;
-		padding: 0.6em 0.5em;
-		color: color-get(utility, white);  /* stylelint-disable-line  */
-		transition: all ease-out 0.6s;
-		text-decoration: none;
+}
 
-		&:hover {
-			background-color: rgba(166, 0, 22, 0.6);
-			transition: all ease 0.3s;
-		}
+.side-nav__link {
+	@include font-get(anchor, s);
+	display: block;
+	padding: rem(10px) rem(8px);
+	color: color-get(utility, white);  /* stylelint-disable-line  */
+	transition: all ease-out 0.6s;
+	text-decoration: none;
+	margin-bottom: rem(0.2px);
 
-		&.current {
-			background-color: rgba(166, 0, 22, 0.4);
-		}
+	&:hover {
+		background-color: rgba(166, 0, 22, 0.6);
+		transition: all ease 0.3s;
+		color: color-get(utility, white);/* stylelint-disable-line  */
 	}
+
+	&.current {
+		background-color: rgba(166, 0, 22, 0.4);
+	}
+}
+
+.side-nav__link-list {
+	background-color: rgba(255, 113, 132, 0.2);
 }
