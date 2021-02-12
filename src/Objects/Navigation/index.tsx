@@ -29,7 +29,7 @@ const Navigation = () => {
 			icon="Caret"
 		>
 			{NavData.map((item: Data) => (
-				<div title={item.title}>
+				<div key={uid()} title={item.title}>
 					{item.childLinks &&
 						item.childLinks.map((child: ChildLink) => {
 							return (
