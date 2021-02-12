@@ -7,58 +7,46 @@ import Accordion from '../Accordion/Accordion';
 
 import style from './Navigation.module.scss';
 
+type ChildLink = {
+	title: string;
+	path: string;
+	anchorClass: string;
+};
+
 type Data = {
 	title: string;
 	path: string;
 	anchorClass: string;
-	childLinks?: {
-		title: string;
-		path: string;
-		anchorClass: string;
-	}[];
+	childLinks?: ChildLink[];
 };
 
 const Navigation = () => {
 	return (
-		<>
-			{NavData.map((item: Data) =>
-				item.childLinks?.length ? (
-					<Accordion
-						key={uid()}
-						btnClass={style['side-nav__link']}
-						contentClass={style['side-nav__link-list']}
-					>
-						<div title={item.title}>
-							{item.childLinks.map((childItem) => {
-								return (
-									<div key={uid()}>
-										<Anchor
-											linkType="navigation"
-											path={childItem.path}
-											anchorClass={
-												style[childItem.anchorClass]
-											}
-										>
-											{childItem.title}
-										</Anchor>
-									</div>
-								);
-							})}
-						</div>
-					</Accordion>
-				) : (
-					<div key={uid()}>
-						<Anchor
-							linkType="navigation"
-							path={item.path}
-							anchorClass={style[item.anchorClass]}
-						>
-							{item.title}
-						</Anchor>
-					</div>
-				)
-			)}
-		</>
+		<Accordion
+			key={uid()}
+			btnClass={style['side-nav__link']}
+			contentClass={style['side-nav__link-list']}
+			icon="Caret"
+		>
+			{NavData.map((item: Data) => (
+				<div title={item.title}>
+					{item.childLinks &&
+						item.childLinks.map((child: ChildLink) => {
+							return (
+								<div key={uid()}>
+									<Anchor
+										linkType="navigation"
+										path={child.path}
+										anchorClass={style[child.anchorClass]}
+									>
+										{child.title}
+									</Anchor>
+								</div>
+							);
+						})}
+				</div>
+			))}
+		</Accordion>
 	);
 };
 

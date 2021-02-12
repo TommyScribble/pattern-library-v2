@@ -49,6 +49,8 @@ const Accordion: React.FC<Props> = ({
 	};
 
 	const updateAccordionItems = (title: string, isOpen: boolean): void => {
+		console.log('OPEN ALLOW', allowMultipleOpen);
+
 		if (!allowMultipleOpen) closeAllSections();
 		if (isOpen === true)
 			setAccordionItems({
