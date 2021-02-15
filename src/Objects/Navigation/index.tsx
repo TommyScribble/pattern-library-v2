@@ -29,7 +29,11 @@ const Navigation = () => {
 			icon="Caret"
 		>
 			{NavData.map((item: Data) => (
-				<div key={uid()} title={item.title}>
+				<div
+					key={uid()}
+					title={item.title}
+					link-datatype={item.childLinks === undefined}
+				>
 					{item.childLinks &&
 						item.childLinks.map((child: ChildLink) => {
 							return (

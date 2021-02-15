@@ -19,6 +19,16 @@ type SectionShape = {
 	[key: string]: boolean;
 };
 
+type childProps = {
+	props: {
+		isOpen?: boolean;
+		title: string;
+		'data-btnChild'?: any;
+		'link-datatype'?: boolean;
+		children: any;
+	};
+};
+
 const Accordion: React.FC<Props> = ({
 	allowMultipleOpen,
 	children,
@@ -59,11 +69,15 @@ const Accordion: React.FC<Props> = ({
 
 	return (
 		<ul className={style.accordion}>
-			{kids.map((child: any, i: number) => {
+			{kids.map((child: childProps, i: number) => {
 				return (
 					<AccordionItem
 						key={i}
-						isOpen={accordionItems[child.props.title]}
+						isOpen={
+							child.props.children
+								? accordionItems[child.props.title]
+								: null
+						}
 						title={child.props.title}
 						btnChild={child.props['data-btnChild']}
 						updateAccordionItems={updateAccordionItems}
@@ -71,6 +85,7 @@ const Accordion: React.FC<Props> = ({
 						btnClass={btnClass}
 						btnChildStyle={btnChildStyle}
 						contentClass={contentClass}
+						link={child.props['link-datatype']}
 					>
 						{child.props.children}
 					</AccordionItem>

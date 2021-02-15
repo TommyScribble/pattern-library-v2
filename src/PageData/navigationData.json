@@ -2,14 +2,7 @@
 	{
 		"title": "Homepage",
 		"path": "/",
-		"anchorClass": "side-nav__link",
-		"childLinks": [
-			{
-				"title": "About",
-				"path": "/base/colours",
-				"anchorClass": "side-nav__link"
-			}
-		]
+		"anchorClass": "side-nav__link"
 	},
 	{
 		"title": "Base",

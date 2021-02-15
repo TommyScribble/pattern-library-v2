@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 import Icon from '../../Atoms/Icon';
+import Anchor from '../../Atoms/Anchor';
 
 import style from './Accordion.module.scss';
 
@@ -12,8 +13,9 @@ type Props = {
 	btnClass?: string;
 	btnChildStyle?: string;
 	contentClass?: string;
-	isOpen: boolean;
+	isOpen: boolean | null;
 	btnChild?: any;
+	link?: boolean;
 };
 
 const AccordionItem: React.FC<Props> = ({
@@ -26,10 +28,11 @@ const AccordionItem: React.FC<Props> = ({
 	contentClass,
 	isOpen,
 	btnChild,
+	link,
 }: Props) => {
 	const accordionRef = useRef<any>();
 
-	const [sectionOpen, setSectionOpen] = useState(false);
+	const [sectionOpen, setSectionOpen] = useState<null | boolean>();
 	const [sectionHeight, setSectionHeight] = useState('0px');
 
 	useEffect(() => {
@@ -44,7 +47,10 @@ const AccordionItem: React.FC<Props> = ({
 		}
 	}, [sectionOpen]);
 
-	const handleSectionClick = (title: string, sectionOpen: boolean): void => {
+	const handleSectionClick = (
+		title: string,
+		sectionOpen: boolean | null | undefined
+	): void => {
 		setSectionOpen(() => !sectionOpen);
 		updateAccordionItems(title, !sectionOpen);
 	};
@@ -55,11 +61,25 @@ const AccordionItem: React.FC<Props> = ({
 		maxHeight: `${sectionHeight}`,
 	};
 
-	return (
-		<li className={style['accordion-item']}>
+	const ParentEl = () =>
+		link === true ? (
+			<Anchor
+				anchorClass={`${style['accordion-item__button']} ${btnClass} ${activeBtn}`}
+				linkType="internal"
+				path="/"
+			>
+				<div className={style['button-content']}>
+					<div className={style['button-content__title']}>
+						{title}
+					</div>
+				</div>
+			</Anchor>
+		) : (
 			<button
 				className={`${style['accordion-item__button']} ${btnClass} ${activeBtn}`}
-				onClick={() => handleSectionClick(title, sectionOpen)}
+				onClick={() =>
+					isOpen !== null && handleSectionClick(title, sectionOpen)
+				}
 			>
 				<div className={style['button-content']}>
 					<div className={style['button-content__title']}>
@@ -74,19 +94,26 @@ const AccordionItem: React.FC<Props> = ({
 					)}
 				</div>
 
-				{icon && (
+				{isOpen !== null && icon && (
 					<div className={`${style.icon} ${style.rotate}`}>
 						<Icon iconName={icon} />
 					</div>
 				)}
 			</button>
-			<div
-				ref={accordionRef}
-				style={activeHeight}
-				className={`${style['accordion-item__background']} ${contentClass}`}
-			>
-				<div className={style.content}>{children}</div>
-			</div>
+		);
+
+	return (
+		<li className={style['accordion-item']}>
+			<ParentEl />
+			{children && (
+				<div
+					ref={accordionRef}
+					style={activeHeight}
+					className={`${style['accordion-item__background']} ${contentClass}`}
+				>
+					<div className={style.content}>{children}</div>
+				</div>
+			)}
 		</li>
 	);
 };
