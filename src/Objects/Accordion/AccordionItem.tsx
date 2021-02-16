@@ -56,6 +56,7 @@ const AccordionItem: React.FC<Props> = ({
 	};
 
 	const activeBtn = sectionOpen ? style['active-btn'] : '';
+	const activeIcon = sectionOpen ? style['active-icon'] : '';
 
 	const activeHeight = {
 		maxHeight: `${sectionHeight}`,
@@ -91,7 +92,7 @@ const AccordionItem: React.FC<Props> = ({
 				</div>
 
 				{isOpen !== null && icon && (
-					<div className={`${style['btn-icon']}`}>
+					<div className={`${style['btn-icon']} ${activeIcon}`}>
 						<Icon iconName={icon} />
 					</div>
 				)}

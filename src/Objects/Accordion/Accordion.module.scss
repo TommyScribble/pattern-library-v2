@@ -31,7 +31,7 @@
 }
 
 .accordion-item__button {
-	
+
 	.button-content {
 		display: inline-flex;
 		flex-wrap: wrap;
@@ -52,4 +52,8 @@
 
 .active-btn { //this needs to be passed by the parent so the user can choose teh action
 	display: initial;
+}
+
+.active-icon {
+	transform: rotate(180deg);
 }
