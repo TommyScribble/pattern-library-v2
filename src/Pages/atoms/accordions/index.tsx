@@ -13,7 +13,7 @@ const accordion = () => {
 				contentClass={'content-class'}
 				btnClass={'button-class'}
 			>
-				<div title={'Alligator Mississippiensis-01'}>
+				<div title={'Alligator Mississippiensis-01'} id="open">
 					<div>
 						<strong>Common Name:</strong> American Alligator
 					</div>

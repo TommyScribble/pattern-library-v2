@@ -21,7 +21,7 @@ type SectionShape = {
 
 type childProps = {
 	props: {
-		isOpen?: boolean;
+		id?: string;
 		title: string;
 		'data-btnChild'?: any;
 		'link-datatype'?: boolean;
@@ -73,11 +73,7 @@ const Accordion: React.FC<Props> = ({
 				return (
 					<AccordionItem
 						key={i}
-						isOpen={
-							child.props.children
-								? accordionItems[child.props.title]
-								: null
-						}
+						isOpen={child.props.id === 'open' ? true : false}
 						title={child.props.title}
 						btnChild={child.props['data-btnChild']}
 						updateAccordionItems={updateAccordionItems}
