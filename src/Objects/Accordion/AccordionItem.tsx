@@ -55,24 +55,20 @@ const AccordionItem: React.FC<Props> = ({
 		updateAccordionItems(title, !sectionOpen);
 	};
 
-	const activeBtn = sectionOpen ? style.active : '';
+	const activeBtn = sectionOpen ? style['active-btn'] : '';
 
 	const activeHeight = {
 		maxHeight: `${sectionHeight}`,
 	};
 
-	const ParentEl = () =>
+	const ButtonEl = () =>
 		link === true ? (
 			<Anchor
-				anchorClass={`${style['accordion-item__button']} ${btnClass} ${activeBtn}`}
-				linkType="internal"
+				anchorClass={`${btnClass} ${activeBtn}`}
+				linkType="navigation"
 				path="/"
 			>
-				<div className={style['button-content']}>
-					<div className={style['button-content__title']}>
-						{title}
-					</div>
-				</div>
+				{title}
 			</Anchor>
 		) : (
 			<button
@@ -95,7 +91,7 @@ const AccordionItem: React.FC<Props> = ({
 				</div>
 
 				{isOpen !== null && icon && (
-					<div className={`${style.icon} ${style.rotate}`}>
+					<div className={`${style['btn-icon']}`}>
 						<Icon iconName={icon} />
 					</div>
 				)}
@@ -104,7 +100,7 @@ const AccordionItem: React.FC<Props> = ({
 
 	return (
 		<li className={style['accordion-item']}>
-			<ParentEl />
+			<ButtonEl />
 			{children && (
 				<div
 					ref={accordionRef}
