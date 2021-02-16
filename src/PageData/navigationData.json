@@ -1,102 +1,41 @@
 [
 	{
 		"title": "Homepage",
-		"path": "/",
-		"anchorClass": "side-nav__link"
-	},
-	{
-		"title": "Base",
-		"path": "/base",
-		"anchorClass": "side-nav__link",
-		"childLinks": [
-			{
-				"title": "Colours",
-				"path": "/base/colours",
-				"anchorClass": "side-nav__link"
-			},
-			{
-				"title": "Typography",
-				"path": "/base/typography",
-				"anchorClass": "side-nav__link"
-			},
-			{
-				"title": "Spacing",
-				"path": "/base/spacing",
-				"anchorClass": "side-nav__link"
-			},
-			{
-				"title": "Box Shadows",
-				"path": "/base/box-shadows",
-				"anchorClass": "side-nav__link"
-			},
-			{
-				"title": "Transitions",
-				"path": "/base/transitions",
-				"anchorClass": "side-nav__link"
-			},
-			{
-				"title": "Z-index",
-				"path": "/base/z-index",
-				"anchorClass": "side-nav__link"
-			}
-		]
-	},
-	{
-		"title": "Guidelines",
-		"path": "/guidelines",
-		"anchorClass": "side-nav__link",
-		"childLinks": [
-			{
-				"title": "Accessability",
-				"path": "/guidelines/accessability",
-				"anchorClass": "side-nav__link"
-			}
-		]
+		"path": "/"
 	},
 	{
 		"title": "Atoms",
 		"path": "/atoms",
-		"anchorClass": "side-nav__link",
 		"childLinks": [
 			{
+				"title": "Anchors",
+				"path": "/atoms/buttons"
+			},
+			{
 				"title": "Buttons",
-				"path": "/atoms/buttons",
-				"anchorClass": "side-nav__link"
+				"path": "/atoms/buttons"
 			},
 			{
-				"title": "Accordion",
-				"path": "/atoms/accordion",
-				"anchorClass": "side-nav__link"
-			},
-			{
-				"title": "Text",
-				"path": "/atoms/text",
-				"anchorClass": "side-nav__link"
+				"title": "Heading",
+				"path": "/atoms/heading"
 			},
 			{
 				"title": "Icons",
-				"path": "/atoms/icons",
-				"anchorClass": "side-nav__link"
+				"path": "/atoms/icons"
 			},
 			{
-				"title": "Progress Bar",
-				"path": "/atoms/progress-bar",
-				"anchorClass": "side-nav__link"
-			},
+				"title": "Text",
+				"path": "/atoms/text"
+			}
+		]
+	},
+	{
+		"title": "Objects",
+		"path": "/obects",
+		"childLinks": [
 			{
-				"title": "Spinner",
-				"path": "/atoms/spinner",
-				"anchorClass": "side-nav__link"
-			},
-			{
-				"title": "Tooltip",
-				"path": "/atoms/tooltip",
-				"anchorClass": "side-nav__link"
-			},
-			{
-				"title": "Checkbox",
-				"path": "/atoms/checkbox",
-				"anchorClass": "side-nav__link"
+				"title": "Accordion",
+				"path": "/atoms/accordion"
 			}
 		]
 	}

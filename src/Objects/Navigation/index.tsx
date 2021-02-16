@@ -10,13 +10,11 @@ import style from './Navigation.module.scss';
 type ChildLink = {
 	title: string;
 	path: string;
-	anchorClass: string;
 };
 
 type Data = {
 	title: string;
 	path: string;
-	anchorClass: string;
 	childLinks?: ChildLink[];
 };
 
@@ -41,7 +39,7 @@ const Navigation = () => {
 									<Anchor
 										linkType="navigation"
 										path={child.path}
-										anchorClass={style[child.anchorClass]}
+										anchorClass={style['side-nav__link']}
 									>
 										{child.title}
 									</Anchor>
