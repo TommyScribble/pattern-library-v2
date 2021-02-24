@@ -15,7 +15,7 @@
 				"props": {
 					"path": "./",
 					"linkType": "internal",
-					"children": "A link"
+					"children": "An internal link"
 				}
 			}
 		},
@@ -24,9 +24,9 @@
 			"component": {
 				"name": "anchor",
 				"props": {
-					"path": "./",
+					"path": "/",
 					"linkType": "navgation",
-					"children": "A link"
+					"children": "A navigation link"
 				}
 			}
 		},
@@ -35,8 +35,8 @@
 			"component": {
 				"name": "anchor",
 				"props": {
-					"path": "./",
-					"children": "A link"
+					"path": "/",
+					"children": "A defualt or external link"
 				}
 			}
 		}

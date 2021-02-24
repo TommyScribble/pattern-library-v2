@@ -12,7 +12,7 @@ import { uid } from '../../helpers/helpFunctions';
 import { ComponentPageProps } from '../../typings/types';
 
 import style from './componentpage.module.scss';
-import component from '../../helpers/component';
+import componentBuilder from '../../helpers/componentBuilder';
 
 const ComponentPage = ({ content }: ComponentPageProps) => {
 	return (
@@ -44,7 +44,7 @@ const ComponentPage = ({ content }: ComponentPageProps) => {
 						<div
 							key={item.title}
 							title={item.title}
-							data-btnChild={component(item.component)}
+							data-btnChild={componentBuilder(item.component)}
 						>
 							<SyntaxHighlighter language="javascript" style={vs}>
 								{'put some good stuff here'}
