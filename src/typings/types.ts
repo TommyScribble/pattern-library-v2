@@ -26,14 +26,13 @@ export type HomepageProps = {
 
 export type ComponentPageProps = {
 	content: {
+		title: string;
 		description: string[];
 		accordion: {
 			title: string;
-			btnClass: string;
-			btnText: string;
-			btnExample: string;
+			component: any;
 		}[];
-		props: {
+		propsData: {
 			name: string;
 			required: string;
 			type: string;

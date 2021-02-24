@@ -1,4 +1,5 @@
 {
+	"title": "Buttons",
 	"description": [
 		"Primary buttons are used for the most important actions, positive and progressive. It should be used to help guide users to pick the correct action but dont use to many Primary buttons or the user will not unserstand what to choose.",
 		"Secondary buttons should be used to in conjunction with primary buttons to commincate a choice. In effect they should be the second most used button.",
@@ -9,33 +10,23 @@
 	"accordion": [
 		{
 			"title": "Primary button",
-			"btnClass": "primary",
-			"btnText": "Primary",
-			"btnExample": "<Button btnClass='primary'>Primary</Button>"
+			"component": "<Button btnClass='primary'>Primary</Button>"
 		},
 		{
 			"title": "Secondary button",
-			"btnClass": "secondary",
-			"btnText": "Secondary",
-			"btnExample": "<Button btnClass='secondary'>Secondary</Button>"
+			"component": "<Button btnClass='secondary'>Secondary</Button>"
 		},
 		{
 			"title": "Line button",
-			"btnClass": "line",
-			"btnText": "Line",
-			"btnExample": "<Button btnClass='line'>Line</Button>"
+			"component": "<Button btnClass='line'>Line</Button>"
 		},
 		{
 			"title": "Link button",
-			"btnClass": "link",
-			"btnText": "Link",
-			"btnExample": "<Button btnClass='link'>Link</Button>"
+			"component": "<Button btnClass='link'>Link</Button>"
 		},
 		{
 			"title": "Disabled button",
-			"btnClass": "disabled",
-			"btnText": "Disabled",
-			"btnExample": "<Button btnClass='disabled'>Disabled</Button>"
+			"component": "<Button btnClass='disabled'>Disabled</Button>"
 		}
 	],
 	"props": [

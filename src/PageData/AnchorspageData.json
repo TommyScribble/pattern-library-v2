@@ -1,0 +1,82 @@
+{
+	"title": "Anchors",
+	"description": [
+		"Primary buttons are used for the most important actions, positive and progressive. It should be used to help guide users to pick the correct action but dont use to many Primary buttons or the user will not unserstand what to choose.",
+		"Secondary buttons should be used to in conjunction with primary buttons to commincate a choice. In effect they should be the second most used button.",
+		"Line buttons (or tertiary buttons) can be used interchangably with secondary buttons when needed.",
+		"Link buttons should only be used where a link style is needed to communicate an action. Dont use this button for any kind of links or navigation.",
+		"Disabled buttons should only be used to communicate to users the importance of completing a step. When they show a blocked state a clear path must be show to escape it."
+	],
+	"accordion": [
+		{
+			"title": "Internal anchor",
+			"component": {
+				"name": "anchor",
+				"props": {
+					"path": "./",
+					"linkType": "internal",
+					"children": "A link"
+				}
+			}
+		},
+		{
+			"title": "Navigation anchor",
+			"component": {
+				"name": "anchor",
+				"props": {
+					"path": "./",
+					"linkType": "navgation",
+					"children": "A link"
+				}
+			}
+		},
+		{
+			"title": "Default anchor",
+			"component": {
+				"name": "anchor",
+				"props": {
+					"path": "./",
+					"children": "A link"
+				}
+			}
+		}
+	],
+	"propsData": [
+		{
+			"name": "linkType",
+			"required": "No",
+			"type": "'internal' | 'navigation'",
+			"description": "Will default to external if not used"
+		},
+		{
+			"name": "path",
+			"required": "Yes",
+			"type": "String",
+			"description": "The path the anchor links to"
+		},
+		{
+			"name": "anchorClass",
+			"required": "No",
+			"type": "String",
+			"description": "A custom class to enable custom anchor styling"
+		},
+		{
+			"name": "disabled",
+			"required": "No",
+			"type": "Boolean",
+			"description": "Adds a disabled class to the anchor making it disbaled, removes click actions"
+		},
+		{
+			"name": "children",
+			"required": "No",
+			"type": "Any",
+			"description": "The content of an anchor, usually the label but can be any element"
+		},
+		{
+			"name": "rel",
+			"required": "No",
+			"type": "any",
+			"description": "Use this to add the relationship of the linked resource"
+		}
+	]
+}

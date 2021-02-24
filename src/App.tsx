@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Routes from './Templates/Routes';
+import Routes from './04-Templates/Routes';
 
 function App() {
 	return <Routes />;
