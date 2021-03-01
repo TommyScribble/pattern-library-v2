@@ -4,15 +4,14 @@ import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import PageLayout from '../PageLayout';
 import Text from '../../01-Atoms/Text';
-import Button from '../../01-Atoms/Button';
 import Heading from '../../01-Atoms/Heading';
 import Accordion from '../../02-Objects/Accordion/Accordion';
 import PropsTable from '../../02-Objects/PropsTable';
 import { uid } from '../../helpers/helpFunctions';
-import { ComponentPageProps } from '../../typings/types';
-
-import style from './componentpage.module.scss';
 import componentBuilder from '../../helpers/componentBuilder';
+
+import { ComponentPageProps } from '../../typings/types';
+import style from './componentpage.module.scss';
 
 const ComponentPage = ({ content }: ComponentPageProps) => {
 	return (
@@ -23,9 +22,9 @@ const ComponentPage = ({ content }: ComponentPageProps) => {
 				className={style.heading}
 			/>
 			<>
-				{content.description.map((text) => {
-					return <Text key={uid()}>{text}</Text>;
-				})}
+				{content.description.map((text) => (
+					<Text key={uid()}>{text}</Text>
+				))}
 			</>
 			<Heading
 				tagNumber={3}
@@ -34,24 +33,20 @@ const ComponentPage = ({ content }: ComponentPageProps) => {
 			/>
 			<Accordion
 				icon="Caret"
-				btnChildStyle={style.accordionBtn}
+				btnClass={style.accordionBtn}
 				allowMultipleOpen={true}
 			>
-				{content.accordion.map((item) => {
-					console.log(item.component);
-
-					return (
-						<div
-							key={item.title}
-							title={item.title}
-							data-btnChild={componentBuilder(item.component)}
-						>
-							<SyntaxHighlighter language="javascript" style={vs}>
-								{'put some good stuff here'}
-							</SyntaxHighlighter>
-						</div>
-					);
-				})}
+				{content.accordion.map((item) => (
+					<div
+						key={item.title}
+						title={item.title}
+						data-btnChild={componentBuilder(item.component)}
+					>
+						<SyntaxHighlighter language="javascript" style={vs}>
+							{item.example}
+						</SyntaxHighlighter>
+					</div>
+				))}
 			</Accordion>
 			<Heading
 				tagNumber={3}

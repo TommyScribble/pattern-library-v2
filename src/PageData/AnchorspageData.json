@@ -17,7 +17,8 @@
 					"linkType": "internal",
 					"children": "An internal link"
 				}
-			}
+			},
+			"example": "<Anchor path='./' linkType='internal'>An internal link</Anchor>"
 		},
 		{
 			"title": "Navigation anchor",
@@ -28,7 +29,8 @@
 					"linkType": "navgation",
 					"children": "A navigation link"
 				}
-			}
+			},
+			"example": "<Anchor path='./' linkType='navgation'>A navigation link</Anchor>"
 		},
 		{
 			"title": "Default anchor",
@@ -38,7 +40,8 @@
 					"path": "/",
 					"children": "A defualt or external link"
 				}
-			}
+			},
+			"example": "<Anchor path='./'>A defualt or external link/Anchor>"
 		}
 	],
 	"propsData": [

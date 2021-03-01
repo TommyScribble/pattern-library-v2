@@ -31,6 +31,7 @@ export type ComponentPageProps = {
 		accordion: {
 			title: string;
 			component: any;
+			example?: string;
 		}[];
 		propsData: {
 			name: string;

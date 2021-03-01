@@ -31,11 +31,13 @@
 }
 
 .accordion-item__button {
+	padding: 1rem 0;
 
 	.button-content {
 		display: inline-flex;
-		flex-wrap: wrap;
-		width: 80%;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 60%;
 	}
 
 	.btn-icon {

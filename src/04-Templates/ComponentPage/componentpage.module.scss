@@ -1,5 +1,11 @@
-@import '../../styles/mixins';
+@import '../../styles/mixins', '../../styles/colours',   '../../styles/fonts';
 
 h3.heading {
 	margin-top: rem(70px);
 }
+
+.accordionBtn {
+	@include font-get(button, m);
+	border-bottom: 0.5px solid color-get(utility, dark-grey);
+}
+

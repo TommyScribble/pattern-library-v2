@@ -54,4 +54,5 @@ p {
 	@include font-get(para, m);
 	margin-bottom: 0.75rem;
 	max-width: 75ch;
+	font-weight: 300;
 }
