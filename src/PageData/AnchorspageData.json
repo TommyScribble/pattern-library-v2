@@ -1,11 +1,9 @@
 {
 	"title": "Anchors",
 	"description": [
-		"Primary buttons are used for the most important actions, positive and progressive. It should be used to help guide users to pick the correct action but dont use to many Primary buttons or the user will not unserstand what to choose.",
-		"Secondary buttons should be used to in conjunction with primary buttons to commincate a choice. In effect they should be the second most used button.",
-		"Line buttons (or tertiary buttons) can be used interchangably with secondary buttons when needed.",
-		"Link buttons should only be used where a link style is needed to communicate an action. Dont use this button for any kind of links or navigation.",
-		"Disabled buttons should only be used to communicate to users the importance of completing a step. When they show a blocked state a clear path must be show to escape it."
+		"Internal anchors render using the reach Routers Link component",
+		"Navigation links render using the reach Routers Link component wrapped so that they can detect teh current route and add a 'current' class to make styling easy",
+		"Default links use the HTML 'a' tag and are not connected to the router"
 	],
 	"accordion": [
 		{
