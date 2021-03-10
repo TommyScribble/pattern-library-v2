@@ -7,7 +7,7 @@
 	],
 	"accordion": [
 		{
-			"title": "Internal anchor",
+			"title": "",
 			"component": {
 				"name": "anchor",
 				"props": {
@@ -19,7 +19,7 @@
 			"example": "<Anchor path='./' linkType='internal'>An internal link</Anchor>"
 		},
 		{
-			"title": "Navigation anchor",
+			"title": "",
 			"component": {
 				"name": "anchor",
 				"props": {
@@ -31,7 +31,7 @@
 			"example": "<Anchor path='./' linkType='navgation'>A navigation link</Anchor>"
 		},
 		{
-			"title": "Default anchor",
+			"title": "",
 			"component": {
 				"name": "anchor",
 				"props": {

@@ -2,10 +2,12 @@ import React from 'react';
 
 import Anchor from '../01-Atoms/Anchor';
 import Button from '../01-Atoms/Button';
+import Heading from '../01-Atoms/Heading';
 
 const ComponentMap: any = {
 	anchor: Anchor,
-	// button: Button,
+	button: Button,
+	heading: Heading,
 };
 
 type Props = {
@@ -14,8 +16,6 @@ type Props = {
 };
 
 const componentBuilder = ({ props, name }: Props) => {
-	console.log('PROPS', props, name);
-
 	if (typeof ComponentMap[name] !== 'undefined') {
 		return React.createElement(ComponentMap[name], props, [
 			...props.children,

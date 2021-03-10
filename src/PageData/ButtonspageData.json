@@ -9,7 +9,7 @@
 	],
 	"accordion": [
 		{
-			"title": "Primary button",
+			"title": "",
 			"component": {
 				"name": "button",
 				"props": {
@@ -20,7 +20,7 @@
 			"example": "<Button btnClass='primary'>Primary</Button>"
 		},
 		{
-			"title": "Secondary button",
+			"title": "",
 			"component": {
 				"name": "button",
 				"props": {
@@ -31,7 +31,7 @@
 			"example": "<Button btnClass='secondary'>Secondary</Button>"
 		},
 		{
-			"title": "Line button",
+			"title": "",
 			"component": {
 				"name": "button",
 				"props": {
@@ -42,18 +42,18 @@
 			"example": "<Button btnClass='line'>Line</Button>"
 		},
 		{
-			"title": "Link button",
+			"title": "",
 			"component": {
 				"name": "button",
 				"props": {
 					"btnClass": "link",
-					"children": "Link"
+					"children": "Styled like a link"
 				}
 			},
 			"example": "<Button btnClass='link'>Link</Button>"
 		},
 		{
-			"title": "Disabled button",
+			"title": "",
 			"component": {
 				"name": "button",
 				"props": {

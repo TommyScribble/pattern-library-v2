@@ -1,0 +1,52 @@
+{
+	"title": "Headings",
+	"description": [
+		"This component is not always nessesary but if you are getting data sent from a CMS it can be useful since it will render any semantic heading tag, with content, as long as you pass it a 'tagNumber' prop"
+	],
+	"accordion": [
+		{
+			"title": "",
+			"component": {
+				"name": "heading",
+				"props": {
+					"tagNumber": "1",
+					"headingText": "H1 element",
+					"children": ""
+				}
+			},
+			"example": "<Heading tagNumber={1} headingText='H1 element' />"
+		},
+		{
+			"title": "",
+			"component": {
+				"name": "heading",
+				"props": {
+					"tagNumber": "2",
+					"headingText": "H2 element",
+					"children": ""
+				}
+			},
+			"example": "<Heading tagNumber={2} headingText='H2 element' />"
+		}
+	],
+	"propsData": [
+		{
+			"name": "tagNumber",
+			"required": "Yes",
+			"type": "number",
+			"description": "Is the heading tag level"
+		},
+		{
+			"name": "headingText",
+			"required": "Yes",
+			"type": "String",
+			"description": "Content for your heading"
+		},
+		{
+			"name": "className",
+			"required": "No",
+			"type": "String",
+			"description": "Add a custom class"
+		}
+	]
+}
