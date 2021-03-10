@@ -2,7 +2,7 @@
 	"title": "Anchors",
 	"description": [
 		"Internal anchors render using the reach Routers Link component",
-		"Navigation links render using the reach Routers Link component wrapped so that they can detect teh current route and add a 'current' class to make styling easy",
+		"Navigation links add a 'current' class to make styling easy",
 		"Default links use the HTML 'a' tag and are not connected to the router"
 	],
 	"accordion": [

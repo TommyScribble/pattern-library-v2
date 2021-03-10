@@ -10,26 +10,61 @@
 	"accordion": [
 		{
 			"title": "Primary button",
-			"component": "<Button btnClass='primary'>Primary</Button>"
+			"component": {
+				"name": "button",
+				"props": {
+					"btnClass": "primary",
+					"children": "Primary"
+				}
+			},
+			"example": "<Button btnClass='primary'>Primary</Button>"
 		},
 		{
 			"title": "Secondary button",
-			"component": "<Button btnClass='secondary'>Secondary</Button>"
+			"component": {
+				"name": "button",
+				"props": {
+					"btnClass": "secondary",
+					"children": "Secondary"
+				}
+			},
+			"example": "<Button btnClass='secondary'>Secondary</Button>"
 		},
 		{
 			"title": "Line button",
-			"component": "<Button btnClass='line'>Line</Button>"
+			"component": {
+				"name": "button",
+				"props": {
+					"btnClass": "line",
+					"children": "Line"
+				}
+			},
+			"example": "<Button btnClass='line'>Line</Button>"
 		},
 		{
 			"title": "Link button",
-			"component": "<Button btnClass='link'>Link</Button>"
+			"component": {
+				"name": "button",
+				"props": {
+					"btnClass": "link",
+					"children": "Link"
+				}
+			},
+			"example": "<Button btnClass='link'>Link</Button>"
 		},
 		{
 			"title": "Disabled button",
-			"component": "<Button btnClass='disabled'>Disabled</Button>"
+			"component": {
+				"name": "button",
+				"props": {
+					"btnClass": "disabled",
+					"children": "Disabled"
+				}
+			},
+			"example": "<Button btnClass='disabled'>Disabled</Button>"
 		}
 	],
-	"props": [
+	"propsData": [
 		{
 			"name": "type",
 			"required": "No",

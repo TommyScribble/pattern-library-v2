@@ -11,7 +11,7 @@ const Routes = () => {
 	return (
 		<Router>
 			<Homepage path="/" />
-			{/* <Buttons path="/atoms/buttons" /> */}
+			<Buttons path="/atoms/buttons" />
 			<Anchors path="/atoms/anchors" />
 			{/* <Accordion path="/atoms/accordion" /> */}
 			<NotFound default={true} />
