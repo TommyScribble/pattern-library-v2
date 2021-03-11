@@ -1,0 +1,39 @@
+{
+	"title": "Icons",
+	"description": [
+		"Displays any icon that is in the assets folder.",
+		"Make sure to add new icons to the assets folder, then import and add to the iconObj. They will then be available as a component."
+	],
+	"accordion": [
+		{
+			"title": "",
+			"component": {
+				"name": "icon",
+				"props": {
+					"iconName": "Burger",
+					"children": ""
+				}
+			},
+			"example": "<Icon iconName='Burger' />"
+		},
+		{
+			"title": "",
+			"component": {
+				"name": "icon",
+				"props": {
+					"iconName": "Cross",
+					"children": ""
+				}
+			},
+			"example": "<Icon iconName='Cross' />"
+		}
+	],
+	"propsData": [
+		{
+			"name": "iconName",
+			"required": "Yes",
+			"type": "IconTypes",
+			"description": "The icon types are strings generated from the iconObj components keys"
+		}
+	]
+}

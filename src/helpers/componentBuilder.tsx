@@ -3,11 +3,13 @@ import React from 'react';
 import Anchor from '../01-Atoms/Anchor';
 import Button from '../01-Atoms/Button';
 import Heading from '../01-Atoms/Heading';
+import Icon from '../01-Atoms/Icon';
 
 const ComponentMap: any = {
 	anchor: Anchor,
 	button: Button,
 	heading: Heading,
+	icon: Icon,
 };
 
 type Props = {
