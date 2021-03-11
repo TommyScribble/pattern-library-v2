@@ -25,6 +25,9 @@ export type HomepageProps = {
 };
 
 export type ComponentPageProps = {
+	headingSectionClass?: string;
+	accordionSectionClass?: string;
+	propsSectionClass?: string;
 	content: {
 		title: string;
 		description: string[];

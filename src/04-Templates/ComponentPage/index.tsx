@@ -13,47 +13,58 @@ import componentBuilder from '../../helpers/componentBuilder';
 import { ComponentPageProps } from '../../typings/types';
 import style from './componentpage.module.scss';
 
-const ComponentPage = ({ content }: ComponentPageProps) => {
+const ComponentPage = ({
+	content,
+	headingSectionClass,
+	accordionSectionClass,
+	propsSectionClass,
+}: ComponentPageProps) => {
 	return (
 		<PageLayout>
-			<Heading
-				tagNumber={2}
-				headingText={content.title}
-				className={style.heading}
-			/>
-			<>
-				{content.description.map((text) => (
-					<Text key={uid()}>{text}</Text>
-				))}
-			</>
-			<Heading
-				tagNumber={3}
-				headingText="Component examples"
-				className={style.heading}
-			/>
-			<Accordion
-				icon="Caret"
-				btnClass={style.accordionBtn}
-				allowMultipleOpen={true}
-			>
-				{content.accordion.map((item) => (
-					<div
-						key={item.title}
-						title={item.title}
-						data-btnChild={componentBuilder(item.component)}
-					>
-						<SyntaxHighlighter language="javascript" style={vs}>
-							{item.example}
-						</SyntaxHighlighter>
-					</div>
-				))}
-			</Accordion>
-			<Heading
-				tagNumber={3}
-				headingText="Props table"
-				className={style.heading}
-			/>
-			<PropsTable content={content.propsData} />
+			<section className={headingSectionClass}>
+				<Heading
+					tagNumber={2}
+					headingText={content.title}
+					className={style.heading}
+				/>
+				<>
+					{content.description.map((text) => (
+						<Text key={uid()}>{text}</Text>
+					))}
+				</>
+			</section>
+			<section className={accordionSectionClass}>
+				<Heading
+					tagNumber={3}
+					headingText="Component examples"
+					className={style.heading}
+				/>
+				<Accordion
+					icon="Caret"
+					btnClass={style.accordionBtn}
+					allowMultipleOpen={true}
+				>
+					{content.accordion.map((item) => (
+						<div
+							key={item.title}
+							title={item.title}
+							data-btnChild={componentBuilder(item.component)}
+						>
+							<SyntaxHighlighter language="javascript" style={vs}>
+								{item.example}
+							</SyntaxHighlighter>
+						</div>
+					))}
+				</Accordion>
+			</section>
+			<section className={propsSectionClass}>
+				<Heading
+					tagNumber={3}
+					headingText="Props table"
+					className={style.heading}
+				/>
+				<PropsTable content={content.propsData} />
+			</section>
 		</PageLayout>
 	);
 };
