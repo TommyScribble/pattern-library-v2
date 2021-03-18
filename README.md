@@ -57,3 +57,9 @@ Please [open an issue](https://github.com/TommyScribble/pattern-library/issues/n
 
 ## Contributing
 Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and open a pull request.
+
+### Adding component pages
+To add a new page follow these steps
+- Add a data file to the pageData folder following the ComponentPageProps typing 'src/typings/types.ts'
+- Create a page in the '05-Pages' directory using the componentPage template and import your data (add a stylesheet if needed)
+- Add the component you want to render examples of to the component builder function (import it, add it to the object)
