@@ -1,0 +1,33 @@
+{
+	"title": "Text",
+	"description": [
+		"This component returns a p tag and so is not always nessesary but if you are getting data sent from a CMS it can be useful since it will render with content, as long as you pass it 'children'"
+	],
+	"accordion": [
+		{
+			"title": "",
+			"component": {
+				"name": "text",
+				"props": {
+					"children": "This is a P tag",
+					"className": "text-class"
+				}
+			},
+			"example": "<Text className='text-class'>This is a P tag</Text>"
+		}
+	],
+	"propsData": [
+		{
+			"name": "className",
+			"required": "No",
+			"type": "string",
+			"description": "Add a custom class to modify styling"
+		},
+		{
+			"name": "children",
+			"required": "Yes",
+			"type": "String",
+			"description": "Content for your element"
+		}
+	]
+}

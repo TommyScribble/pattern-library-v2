@@ -6,6 +6,7 @@ import Anchors from '../05-Pages/atoms/anchors';
 import Buttons from '../05-Pages/atoms/buttons';
 import Headings from '../05-Pages/atoms/headings';
 import Icons from '../05-Pages/atoms/icons';
+import Text from '../05-Pages/atoms/text';
 import NotFound from '../05-Pages/Error';
 
 const Routes = () => {
@@ -16,6 +17,7 @@ const Routes = () => {
 			<Anchors path="/atoms/anchors" />
 			<Headings path="/atoms/heading" />
 			<Icons path="/atoms/icons" />
+			<Text path="/atoms/text" />
 			<NotFound default={true} />
 		</Router>
 	);
