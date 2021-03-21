@@ -5,7 +5,7 @@ import AccordionItem from './AccordionItem';
 import { IconTypes, ValueOf } from '../../typings/types';
 
 import style from './Accordion.module.scss';
-//TODO: add functionlity to choose initally open section + fisisOpen eRror...
+
 type Props = {
 	allowMultipleOpen?: boolean;
 	children: any;
@@ -37,8 +37,6 @@ const Accordion: React.FC<Props> = ({
 	btnChildStyle,
 	contentClass,
 }: Props) => {
-	console.log('CHILDREN In ACCORDION', children);
-
 	const [accordionItems, setAccordionItems] = useState<SectionShape>({});
 	const kids: any[] | any = !Array.isArray(children) ? [children] : children;
 

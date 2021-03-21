@@ -22,17 +22,10 @@ type Props = {
 	props: any;
 };
 
-const genChildProps = (childProps: object) => {
-	const propsToString = Object.values(childProps).join('');
-
-	console.log('BUILD CHILD PROSP', propsToString);
-	return propsToString;
-};
-
 const componentBuilder = ({ props, name }: Props) => {
 	if (typeof ComponentMap[name] !== 'undefined') {
 		return React.createElement(ComponentMap[name], props, [
-			genChildProps({ ...props.children }),
+			...props.children,
 		]);
 	}
 
