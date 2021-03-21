@@ -6,12 +6,15 @@ import Heading from '../01-Atoms/Heading';
 import Icon from '../01-Atoms/Icon';
 import Text from '../01-Atoms/Text';
 
+import Accordion from '../02-Objects/Accordion/Accordion';
+
 const ComponentMap: any = {
 	anchor: Anchor,
 	button: Button,
 	heading: Heading,
 	icon: Icon,
 	text: Text,
+	accordion: Accordion,
 };
 
 type Props = {
@@ -19,10 +22,17 @@ type Props = {
 	props: any;
 };
 
+const genChildProps = (childProps: object) => {
+	const propsToString = Object.values(childProps).join('');
+
+	console.log('BUILD CHILD PROSP', propsToString);
+	return propsToString;
+};
+
 const componentBuilder = ({ props, name }: Props) => {
 	if (typeof ComponentMap[name] !== 'undefined') {
 		return React.createElement(ComponentMap[name], props, [
-			...props.children,
+			genChildProps({ ...props.children }),
 		]);
 	}
 

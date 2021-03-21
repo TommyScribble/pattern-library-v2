@@ -63,3 +63,4 @@ To add a new page follow these steps
 - Add a data file to the pageData folder following the ComponentPageProps typing 'src/typings/types.ts'
 - Create a page in the '05-Pages' directory using the componentPage template and import your data (add a stylesheet if needed)
 - Add the component you want to render examples of to the component builder function (import it, add it to the object)
+- Add new route to the Routes.

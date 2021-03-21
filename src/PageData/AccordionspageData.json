@@ -1,0 +1,74 @@
+{
+	"title": "Accordions",
+	"description": ["Add accordions to display content when a user clicks"],
+	"accordion": [
+		{
+			"title": "Single open accordion",
+			"component": {
+				"name": "",
+				"props": {
+					"children": ""
+				}
+			},
+			"example": "<Accordion icon='Caret'><div title='First single open accordion section'>This is some content</div title='Second single open accordion section'><div>This is some more content</div></Accordion>"
+		},
+		{
+			"title": "Mutiple open accordion",
+			"component": {
+				"name": "",
+				"props": {
+					"children": ""
+				}
+			},
+			"example": "<Accordion icon='Caret' allowMultipleOpen><div title='First accordion section'>This is some content</div><div title='Second accordion section'>This is some more content</div></Accordion>"
+		},
+		{
+			"title": "Start with open section accordion",
+			"component": {
+				"name": "",
+				"props": {
+					"children": ""
+				}
+			},
+			"example": "<Accordion icon='Caret'><div id='open' title='First open section accordion section'>This is some content</div><div title='Second open section accordion section'>This is some more content</div></Accordion>"
+		}
+	],
+	"propsData": [
+		{
+			"name": "allowMultipleOpen",
+			"required": "No",
+			"type": "boolean",
+			"description": "If prop is included then multiple accordion tabs can be opened at once"
+		},
+		{
+			"name": "children",
+			"required": "Yes",
+			"type": "any",
+			"description": "The children are html divs that create the content sections. Child divs can accept props - id, title, data-btnChild, link-datatype, children. The only props needed to make a working accordion are title and children"
+		},
+		{
+			"name": "icon",
+			"required": "No",
+			"type": "Icons",
+			"description": "Usually Carat but you can pass in any icon that is in the Icon obj"
+		},
+		{
+			"name": "btnClass",
+			"required": "No",
+			"type": "string",
+			"description": "Add a custom class to the button of the accordion"
+		},
+		{
+			"name": "btnChildStyle",
+			"required": "No",
+			"type": "string",
+			"description": "Add a custom class to any children passed to the accordion button"
+		},
+		{
+			"name": "contentClass",
+			"required": "No",
+			"type": "string",
+			"description": "Add a custom class to the content"
+		}
+	]
+}

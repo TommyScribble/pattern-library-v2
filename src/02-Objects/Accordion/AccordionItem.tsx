@@ -13,7 +13,7 @@ type Props = {
 	btnClass?: string;
 	btnChildStyle?: string;
 	contentClass?: string;
-	isOpen: boolean | null;
+	isOpen?: boolean | null;
 	btnChild?: any;
 	link?: boolean;
 };
@@ -30,6 +30,9 @@ const AccordionItem: React.FC<Props> = ({
 	btnChild,
 	link,
 }: Props) => {
+	console.log('CHILDRN in ACCOR ITEM', children);
+	console.log('BTN child in ACCOR ITEM', btnChild);
+
 	const accordionRef = useRef<any>();
 
 	const [sectionOpen, setSectionOpen] = useState<null | boolean>();
