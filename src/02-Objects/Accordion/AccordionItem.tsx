@@ -84,7 +84,9 @@ const AccordionItem: React.FC<Props> = ({
 					</div>
 					{btnChild && (
 						<div
-							className={`${style['button-content__child']} ${btnChildStyle}`}
+							className={`${style['button-content__child']} ${
+								btnChildStyle ? btnChildStyle : ''
+							}`}
 						>
 							{btnChild}
 						</div>
@@ -92,7 +94,11 @@ const AccordionItem: React.FC<Props> = ({
 				</div>
 
 				{isOpen !== null && icon && (
-					<div className={`${style['btn-icon']} ${activeIcon}`}>
+					<div
+						className={`${style['btn-icon']} ${
+							activeIcon ? activeIcon : ''
+						}`}
+					>
 						<Icon iconName={icon} />
 					</div>
 				)}
@@ -106,7 +112,9 @@ const AccordionItem: React.FC<Props> = ({
 				<div
 					ref={accordionRef}
 					style={activeHeight}
-					className={`${style['accordion-item__background']} ${contentClass}`}
+					className={`${style['accordion-item__background']} ${
+						contentClass ? contentClass : ''
+					}`}
 				>
 					<div className={style.content}>{children}</div>
 				</div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 import AccordionItem from './AccordionItem';
 
@@ -40,6 +40,8 @@ const Accordion: React.FC<Props> = ({
 	const [accordionItems, setAccordionItems] = useState<SectionShape>({});
 	const kids: any[] | any = !Array.isArray(children) ? [children] : children;
 
+	console.log('accordionItems', children);
+
 	useEffect(() => {
 		const getAllSections = () => {
 			const obj: SectionShape = {};
@@ -67,27 +69,30 @@ const Accordion: React.FC<Props> = ({
 			});
 	};
 
-	return (
-		<ul className={style.accordion}>
-			{kids.map((child: childProps, i: number) => {
-				return (
-					<AccordionItem
-						key={i}
-						isOpen={child.props.id === 'open' ? true : false}
-						title={child.props.title}
-						btnChild={child.props['data-btnChild']}
-						updateAccordionItems={updateAccordionItems}
-						icon={icon}
-						btnClass={btnClass}
-						btnChildStyle={btnChildStyle}
-						contentClass={contentClass}
-						link={child.props['link-datatype']}
-					>
-						{child.props.children}
-					</AccordionItem>
-				);
-			})}
-		</ul>
+	return useMemo(
+		() => (
+			<ul className={style.accordion}>
+				{kids.map((child: childProps, i: number) => {
+					return (
+						<AccordionItem
+							key={i}
+							isOpen={child.props.id === 'open' ? true : false}
+							title={child.props.title}
+							btnChild={child.props['data-btnChild']}
+							updateAccordionItems={updateAccordionItems}
+							icon={icon}
+							btnClass={btnClass}
+							btnChildStyle={btnChildStyle}
+							contentClass={contentClass}
+							link={child.props['link-datatype']}
+						>
+							{child.props.children}
+						</AccordionItem>
+					);
+				})}
+			</ul>
+		),
+		[accordionItems]
 	);
 };
 

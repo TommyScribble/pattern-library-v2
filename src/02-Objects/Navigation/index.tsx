@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useLocation } from '@reach/router';
 
 import Anchor from '../../01-Atoms/Anchor';
 import { uid } from '../../helpers/helpFunctions';
@@ -19,6 +20,18 @@ type Data = {
 };
 
 const Navigation = () => {
+	const location = useLocation();
+	// const [currentRoute, setCurrentRoute] = useState('undefined');
+
+	const isCurrentRoute = (btnTitle: string) => {
+		const currentRoute = location.pathname;
+		const currentSection = currentRoute.split('/')[1];
+		const isOpen =
+			btnTitle.toLowerCase() === currentSection ? 'open' : 'undefined';
+		console.log('open', btnTitle, currentSection);
+		return isOpen;
+	};
+
 	return (
 		<Accordion
 			key={uid()}
@@ -31,19 +44,19 @@ const Navigation = () => {
 					key={uid()}
 					title={item.title}
 					link-datatype={item.childLinks === undefined}
+					id={isCurrentRoute(item.title)}
 				>
 					{item.childLinks &&
 						item.childLinks.map((child: ChildLink) => {
 							return (
-								<div key={uid()}>
-									<Anchor
-										linkType="navigation"
-										path={child.path}
-										anchorClass={style['side-nav__link']}
-									>
-										{child.title}
-									</Anchor>
-								</div>
+								<Anchor
+									key={uid()}
+									linkType="navigation"
+									path={child.path}
+									anchorClass={style['side-nav__link']}
+								>
+									{child.title}
+								</Anchor>
 							);
 						})}
 				</div>
