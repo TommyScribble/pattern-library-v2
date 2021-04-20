@@ -20,11 +20,20 @@
 	}
 
 	&__background {
-		overflow: hidden;
-		transition: max-height 0.6s ease-out;
+		visibility: hidden;
+		overflow: scroll;
+		max-height: 0px;
+		// opacity: 1;
+		transition: all 0.6s ease;
+		-ms-overflow-style: none;  /* Hide scroll bar IE and Edge */
+		scrollbar-width: none;  /* Hide scroll bar Firefox */
+
+		/* Hide scrollbar for Chrome, Safari and Opera */
+		&:-webkit-scrollbar {
+			display: none;
+		}
 
 		.content {
-			
 			padding: 1em 0;
 		}
 	}

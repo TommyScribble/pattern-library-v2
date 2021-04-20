@@ -29,7 +29,7 @@ type childProps = {
 	};
 };
 
-const Accordion: React.FC<Props> = ({
+const Accordion = ({
 	allowMultipleOpen,
 	children,
 	icon,
@@ -40,13 +40,12 @@ const Accordion: React.FC<Props> = ({
 	const [accordionItems, setAccordionItems] = useState<SectionShape>({});
 	const kids: any[] | any = !Array.isArray(children) ? [children] : children;
 
-	console.log('accordionItems', children);
-
 	useEffect(() => {
 		const getAllSections = () => {
 			const obj: SectionShape = {};
 			kids.forEach((child: any) => {
-				obj[child.props.title] = false;
+				obj[child.props.title] =
+					child.props.id === 'open' ? true : false;
 			});
 			return obj;
 		};
@@ -62,12 +61,15 @@ const Accordion: React.FC<Props> = ({
 
 	const updateAccordionItems = (title: string, isOpen: boolean): void => {
 		if (!allowMultipleOpen) closeAllSections();
-		if (isOpen === true)
-			setAccordionItems({
-				...accordionItems,
-				[title]: isOpen,
-			});
+		setAccordionItems({
+			...accordionItems,
+			[title]: isOpen,
+		});
 	};
+
+	function isSectionOpen(title: string) {
+		return accordionItems[title] === true;
+	}
 
 	return useMemo(
 		() => (
@@ -76,7 +78,7 @@ const Accordion: React.FC<Props> = ({
 					return (
 						<AccordionItem
 							key={i}
-							isOpen={child.props.id === 'open' ? true : false}
+							isOpen={isSectionOpen(child.props.title)}
 							title={child.props.title}
 							btnChild={child.props['data-btnChild']}
 							updateAccordionItems={updateAccordionItems}

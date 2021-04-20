@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation } from '@reach/router';
 
 import Anchor from '../../01-Atoms/Anchor';
@@ -21,14 +21,12 @@ type Data = {
 
 const Navigation = () => {
 	const location = useLocation();
-	// const [currentRoute, setCurrentRoute] = useState('undefined');
 
 	const isCurrentRoute = (btnTitle: string) => {
 		const currentRoute = location.pathname;
 		const currentSection = currentRoute.split('/')[1];
 		const isOpen =
 			btnTitle.toLowerCase() === currentSection ? 'open' : 'undefined';
-		console.log('open', btnTitle, currentSection);
 		return isOpen;
 	};
 

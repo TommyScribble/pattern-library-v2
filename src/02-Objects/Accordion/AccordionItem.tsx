@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {
+	useState,
+	useEffect,
+	useRef,
+	CSSProperties,
+	useMemo,
+} from 'react';
 
 import Icon from '../../01-Atoms/Icon';
 import Anchor from '../../01-Atoms/Anchor';
@@ -18,7 +24,7 @@ type Props = {
 	link?: boolean;
 };
 
-const AccordionItem: React.FC<Props> = ({
+const AccordionItem = ({
 	title,
 	children,
 	updateAccordionItems,
@@ -30,37 +36,33 @@ const AccordionItem: React.FC<Props> = ({
 	btnChild,
 	link,
 }: Props) => {
-	const accordionRef = useRef<any>();
+	const accordionRef = useRef<HTMLDivElement>(null);
 
-	const [sectionOpen, setSectionOpen] = useState<null | boolean>();
-	const [sectionHeight, setSectionHeight] = useState('0px');
-
-	useEffect(() => {
-		setSectionOpen(isOpen);
-	}, [isOpen]);
+	const [sectionHeight, setSectionHeight] = useState('');
 
 	useEffect(() => {
-		if (accordionRef.current !== null) {
-			setSectionHeight(
-				!sectionOpen ? '0px' : `${accordionRef.current.scrollHeight}px`
-			);
-		}
-	}, [sectionOpen]);
+		accordionRef?.current !== null &&
+			setSectionHeight(`${accordionRef.current.scrollHeight}px`);
+	}, []);
 
 	const handleSectionClick = (
 		title: string,
-		sectionOpen: boolean | null | undefined
+		isOpen: boolean | null | undefined
 	): void => {
-		setSectionOpen(() => !sectionOpen);
-		updateAccordionItems(title, !sectionOpen);
+		updateAccordionItems(
+			title,
+			isOpen === true ? (isOpen = false) : (isOpen = true)
+		);
 	};
 
-	const activeBtn = sectionOpen ? style['active-btn'] : '';
-	const activeIcon = sectionOpen ? style['active-icon'] : '';
+	const activeBtn = isOpen ? style['active-btn'] : '';
+	const activeIcon = isOpen ? style['active-icon'] : '';
 
-	const activeHeight = {
+	const activeStyle = {
+		visibility: 'visible',
 		maxHeight: `${sectionHeight}`,
-	};
+		transition: 'all 0.6s ease',
+	} as CSSProperties;
 
 	const ButtonEl = () =>
 		link === true ? (
@@ -75,7 +77,7 @@ const AccordionItem: React.FC<Props> = ({
 			<button
 				className={`${style['accordion-item__button']} ${btnClass} ${activeBtn}`}
 				onClick={() =>
-					isOpen !== null && handleSectionClick(title, sectionOpen)
+					isOpen !== null && handleSectionClick(title, isOpen)
 				}
 			>
 				<div className={style['button-content']}>
@@ -105,21 +107,24 @@ const AccordionItem: React.FC<Props> = ({
 			</button>
 		);
 
-	return (
-		<li className={style['accordion-item']}>
-			<ButtonEl />
-			{children && (
-				<div
-					ref={accordionRef}
-					style={activeHeight}
-					className={`${style['accordion-item__background']} ${
-						contentClass ? contentClass : ''
-					}`}
-				>
-					<div className={style.content}>{children}</div>
-				</div>
-			)}
-		</li>
+	return useMemo(
+		() => (
+			<li className={style['accordion-item']}>
+				<ButtonEl />
+				{children && (
+					<div
+						ref={accordionRef}
+						style={isOpen ? activeStyle : {}}
+						className={`${style['accordion-item__background']} ${
+							contentClass ? contentClass : ''
+						}`}
+					>
+						<div className={style.content}>{children}</div>
+					</div>
+				)}
+			</li>
+		),
+		[sectionHeight, isOpen]
 	);
 };
 
