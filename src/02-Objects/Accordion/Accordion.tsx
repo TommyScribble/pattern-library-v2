@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import AccordionItem from './AccordionItem';
 
@@ -71,30 +71,27 @@ const Accordion = ({
 		return accordionItems[title] === true;
 	}
 
-	return useMemo(
-		() => (
-			<ul className={style.accordion}>
-				{kids.map((child: childProps, i: number) => {
-					return (
-						<AccordionItem
-							key={i}
-							isOpen={isSectionOpen(child.props.title)}
-							title={child.props.title}
-							btnChild={child.props['data-btnChild']}
-							updateAccordionItems={updateAccordionItems}
-							icon={icon}
-							btnClass={btnClass}
-							btnChildStyle={btnChildStyle}
-							contentClass={contentClass}
-							link={child.props['link-datatype']}
-						>
-							{child.props.children}
-						</AccordionItem>
-					);
-				})}
-			</ul>
-		),
-		[accordionItems]
+	return (
+		<ul className={style.accordion}>
+			{kids.map((child: childProps, i: number) => {
+				return (
+					<AccordionItem
+						key={i}
+						isOpen={isSectionOpen(child.props.title)}
+						title={child.props.title}
+						btnChild={child.props['data-btnChild']}
+						updateAccordionItems={updateAccordionItems}
+						icon={icon}
+						btnClass={btnClass}
+						btnChildStyle={btnChildStyle}
+						contentClass={contentClass}
+						link={child.props['link-datatype']}
+					>
+						{child.props.children}
+					</AccordionItem>
+				);
+			})}
+		</ul>
 	);
 };
 

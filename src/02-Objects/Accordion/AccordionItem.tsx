@@ -1,10 +1,4 @@
-import React, {
-	useState,
-	useEffect,
-	useRef,
-	CSSProperties,
-	useMemo,
-} from 'react';
+import React, { useState, useEffect, useRef, CSSProperties } from 'react';
 
 import Icon from '../../01-Atoms/Icon';
 import Anchor from '../../01-Atoms/Anchor';
@@ -37,7 +31,6 @@ const AccordionItem = ({
 	link,
 }: Props) => {
 	const accordionRef = useRef<HTMLDivElement>(null);
-
 	const [sectionHeight, setSectionHeight] = useState('');
 
 	useEffect(() => {
@@ -107,24 +100,21 @@ const AccordionItem = ({
 			</button>
 		);
 
-	return useMemo(
-		() => (
-			<li className={style['accordion-item']}>
-				<ButtonEl />
-				{children && (
-					<div
-						ref={accordionRef}
-						style={isOpen ? activeStyle : {}}
-						className={`${style['accordion-item__background']} ${
-							contentClass ? contentClass : ''
-						}`}
-					>
-						<div className={style.content}>{children}</div>
-					</div>
-				)}
-			</li>
-		),
-		[sectionHeight, isOpen]
+	return (
+		<li className={style['accordion-item']}>
+			<ButtonEl />
+			{children && (
+				<div
+					ref={accordionRef}
+					style={isOpen ? activeStyle : {}}
+					className={`${style['accordion-item__background']} ${
+						contentClass ? contentClass : ''
+					}`}
+				>
+					<div className={style.content}>{children}</div>
+				</div>
+			)}
+		</li>
 	);
 };
 
