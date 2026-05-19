@@ -1,5 +1,5 @@
 import React from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { Prism } from 'react-syntax-highlighter';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import PageLayout from '../PageLayout';
@@ -12,6 +12,10 @@ import componentBuilder from '../../helpers/componentBuilder';
 
 import { ComponentPageProps } from '../../typings/types';
 import style from './componentpage.module.scss';
+
+// react-syntax-highlighter class components are not yet typed for React 18
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const SyntaxHighlighter = Prism as any;
 
 const ComponentPage = ({
 	content,

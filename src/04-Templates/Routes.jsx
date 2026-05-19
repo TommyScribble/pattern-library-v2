@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router } from '@reach/router';
+import { Route, Routes } from 'react-router-dom';
 
 import Homepage from '../05-Pages';
 import Anchors from '../05-Pages/atoms/anchors';
@@ -12,19 +12,19 @@ import Accordions from '../05-Pages/objects/accordions';
 
 import NotFound from '../05-Pages/Error';
 
-const Routes = () => {
+const AppRoutes = () => {
 	return (
-		<Router>
-			<Homepage path="/" />
-			<Buttons path="/atoms/buttons" />
-			<Anchors path="/atoms/anchors" />
-			<Headings path="/atoms/heading" />
-			<Icons path="/atoms/icons" />
-			<Text path="/atoms/text" />
-			<Accordions path="/objects/accordions" />
-			<NotFound default={true} />
-		</Router>
+		<Routes>
+			<Route path="/" element={<Homepage />} />
+			<Route path="/atoms/buttons" element={<Buttons />} />
+			<Route path="/atoms/anchors" element={<Anchors />} />
+			<Route path="/atoms/heading" element={<Headings />} />
+			<Route path="/atoms/icons" element={<Icons />} />
+			<Route path="/atoms/text" element={<Text />} />
+			<Route path="/objects/accordions" element={<Accordions />} />
+			<Route path="*" element={<NotFound />} />
+		</Routes>
 	);
 };
 
-export default Routes;
+export default AppRoutes;

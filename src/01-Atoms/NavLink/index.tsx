@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from '@reach/router';
+import { Link, useLocation } from 'react-router-dom';
 
 import style from './NavLink.module.scss';
 
