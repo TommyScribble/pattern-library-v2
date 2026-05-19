@@ -11,6 +11,7 @@
 
 .side-nav__link {
 	@include font-get(anchor, s);
+
 	display: block;
 	padding: rem(10px) rem(8px);
 	font-weight: 300;
@@ -20,13 +21,13 @@
 	margin-bottom: rem(0.2px);
 
 	&:hover {
-		background-color: rgba(166, 0, 22, 0.6);
+		background-color: rgb(166 0 22 / 60%);
 		transition: all ease 0.3s;
 		color: color-get(utility, white);/* stylelint-disable-line  */
 	}
 
 	&.current {
-		background-color: rgba(166, 0, 22, 0.4);
+		background-color: rgb(166 0 22 / 40%);
 	}
 }
 

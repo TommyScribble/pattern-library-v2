@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet'),
+@import 'https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet',
 		'./functions',
 		'./mixins';
+
 		
 $ff-archivo: 'Archivo', sans-serif;
 $ff-open-sans: 'Open Sans', sans-serif;
-
 $fonts: (
 	heading: (
 		xl: (
@@ -76,9 +76,11 @@ $fonts: (
 @mixin font-get($text-type, $size) {
 	@if map-has-key($fonts, $text-type) {
 		$value: map-deep-get($fonts, $text-type, $size);
+
 		@if type-of($value) == 'list' {
 			font-size: nth($value, 1);
-			@if (length($value) > 1) {
+
+			@if length($value) > 1 {
 				line-height: nth($value, 2);
 			}
 		} @else {

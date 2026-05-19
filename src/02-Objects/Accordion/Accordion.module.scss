@@ -3,12 +3,11 @@
 .accordion {
 	list-style: none;
 	width: 100%;
-	padding-left: 0px;
+	padding-left: 0;
 	margin: 0;
 }
 
 .accordion-item {
-
 	&__button {
 		background-color: transparent;
 		width: 100%;
@@ -22,7 +21,8 @@
 	&__background {
 		visibility: hidden;
 		overflow: scroll;
-		max-height: 0px;
+		max-height: 0;
+
 		// opacity: 1;
 		transition: all 0.6s ease;
 		-ms-overflow-style: none;  /* Hide scroll bar IE and Edge */
@@ -61,7 +61,7 @@
 	}
 }
 
-.active-btn { //this needs to be passed by the parent so the user can choose teh action
+.active-btn { // this needs to be passed by the parent so the user can choose teh action
 	display: initial;
 }
 

@@ -2,6 +2,7 @@
 
 .btn {
 	@include font-get(button, s);
+
 	display: inline-block;
 	padding: rem(15px) rem(32px);
 	border: none;

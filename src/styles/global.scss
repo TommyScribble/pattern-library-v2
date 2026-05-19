@@ -11,7 +11,7 @@ body {
 }
 
 code {
-	font-family: 'source-code-pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 h1,
@@ -27,31 +27,37 @@ h6 {
 
 h1 {
 	@include font-get(heading, xl);
+
 	margin-bottom: 1.5rem;
 }
 
 h2 {
 	@include font-get(heading, l);
+
 	margin-bottom: 1rem;
 }
 
 h3 {
 	@include font-get(heading, m);
+
 	margin-bottom: 0.75rem;
 }
 
 h4 {
 	@include font-get(heading, s);
+
 	margin-bottom: 0.5rem;
 }
 
 h5 {
 	@include font-get(heading, xs);
+
 	margin-bottom: 0.25rem;
 }
 
 p {
 	@include font-get(para, m);
+
 	margin-bottom: 0.75rem;
 	max-width: 75ch;
 	font-weight: 300;

@@ -5,7 +5,7 @@ input.checkbox[type= 'checkbox'] {
 		font-size: 15px;
 	}
 
-	& + label:after {
+	& + label::after {
 		content: '';
 		display: inline-block;
 		width: 18px;
@@ -17,7 +17,7 @@ input.checkbox[type= 'checkbox'] {
 		vertical-align: middle;
 	}
 
-	&:checked + label:after {
+	&:checked + label::after {
 		background-position: right;
 	}
 }

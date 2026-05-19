@@ -7,6 +7,7 @@
 	@each $key in $keys {
 		$map: map-get($map, $key);
 	}
+
 	@return $map;
 }
 
@@ -18,6 +19,7 @@
 /// @return {String} - Updated string
 @function str-replace($string, $search, $replace: '') {
 	$index: str-index($string, $search);
+
 	@if $index {
 		@return str-slice($string, 1, $index - 1) + $replace +
 			str-replace(
@@ -26,5 +28,6 @@
 				$replace
 			);
 	}
+
 	@return $string;
 }

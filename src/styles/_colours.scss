@@ -7,7 +7,6 @@ $grey-light: #C2C2C6;
 $grey-xlight: #F2F2F3;
 $bright-white: #FFF;
 $dark-grey: #222;
-
 $colors: (
 	brand: (
 		primary: $scribble-red,
@@ -30,6 +29,7 @@ $colors: (
 );
 
 @import './functions';
+
 /// Get colours from nested brand colour map
 /// @author Tommy Scribble
 /// @param {String} $color-type - brand, brand-tint, text, grey, function
