@@ -3,6 +3,13 @@
 	"description": "A ",
 	"version": "1.0.0",
 	"private": true,
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"volta": {
+		"node": "20.19.5",
+		"yarn": "1.22.22"
+	},
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged"
@@ -14,17 +21,17 @@
 		"@types/marked": "^1.1.0",
 		"@types/node": "^14.11.8",
 		"@types/reach__router": "^1.3.5",
-		"@types/react": "^16.9.52",
-		"@types/react-dom": "^16.9.8",
-		"@types/react-syntax-highlighter": "^13.5.0",
+		"@types/react": "^18.3.23",
+		"@types/react-dom": "^18.3.7",
+		"@types/react-syntax-highlighter": "^15.5.13",
 		"husky": "^4.3.0",
 		"lint-staged": "^10.4.2",
 		"marked": "^1.2.2",
 		"prettier": "^2.1.2",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"react-scripts": "3.4.3",
-		"react-syntax-highlighter": "^15.4.3",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-scripts": "5.0.1",
+		"react-syntax-highlighter": "^15.6.1",
 		"typescript": "^4.0.3"
 	},
 	"lint-staged": {
@@ -60,8 +67,7 @@
 		"@testing-library/jest-dom": "^5.11.4",
 		"@testing-library/react": "^11.0.2",
 		"@testing-library/user-event": "^7.1.2",
-		"node-sass": "^4.14.1",
-		"postcss-normalize": "^9.0.0",
+		"sass": "^1.89.0",
 		"stylelint": "^13.7.0",
 		"stylelint-order": "^4.1.0",
 		"stylelint-scss": "^3.18.0"
